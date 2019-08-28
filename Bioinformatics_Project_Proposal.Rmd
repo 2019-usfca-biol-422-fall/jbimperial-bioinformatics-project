@@ -37,3 +37,4 @@ Both the environments will be contaminated with staphylococci and other pathogen
 * 6 sterile swabs
 * 6 individual tubes
 * sterile gloves
+* buffer
