@@ -29,5 +29,11 @@ Both the environments will be contaminated with staphylococci and other pathogen
 
 ## Study Design 
 
-Samples will be obtained by taking 3 different swabs of the floor of each enviroment. For the Muni, the individual swab samples will be taken from different buses. The samples for the Bart will be taken from different cars of the same train. All samples will be taken from the entrance of the door.
+  Samples will be obtained by taking 3 different swabs of the floor of each enviroment. For the Muni, the individual swab samples will be taken from different buses. The samples for the Bart will be taken from different cars of the same train. All samples will be taken from the entrance of the door.
+  Samples will be taken during class on Tuesday, September 3rd. The Bart samples will be taken from the Civic Center Bart Station and the Muni samples will be obtained from the 5 or 5R to Ocean Beach at bus stop on Fulton St. This process will take approximately 1 hour. 
 
+### Materials
+
+* 6 sterile swabs
+* 6 individual tubes
+* sterile gloves
