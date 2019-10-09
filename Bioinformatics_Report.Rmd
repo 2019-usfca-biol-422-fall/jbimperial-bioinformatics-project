@@ -1,17 +1,24 @@
 ---
 title: 'Your Title Here'
-author: "Don Francisco"
-date: "August 27, 2019"
+author: "Jacqueline Imperial"
+date: "October 16, 2019"
 output: word_document
 csl: bioinformatics.csl
 bibliography: references.bib
 ---
 
 ```{r setup, include = FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 ```
 
 # Introduction
+
+Bacterial microbes present in urban locations have been a major public health issue especially during the peak of the flu season. Major concerns arise from the transfer of bacteria from person to person in public locations such as parks, schools, hospitals, and public transportation, all containing abundant bacteria. These bacteria may pose a threat to the health of individuals due to a high probability of the bacteria being pathogenic. According to numerous studies, some pathogens found in public transit include the Staphylococcus genus, commonly found on human skin, and S. aureus, a pathogen responsible for giving rise to Methicillin-resistant Staphylococcus aureus, or MRSA. MRSA infections can cause mild infections on the skin, but some may be life-threatening. Therefore, due to this public health concern, it is crucial to analyze the possibly dangerous strains of microbial communities present and growing in such locations. 
+	The aim of this study is to shed light on the lack of cleanliness and maintenance done on public transportation in major cities such as San Francisco’s Bart and Muni. San Francisco State University’s Biology Department has recently extracted microbial communities in micro-locations of public transportation, harboring abundant bacteria. These locations included hand-touch surfaces (hand rails and doors), seats, and the floor. The findings of this particular study found the majority of bacteria located on the floor.  
+	Similar to the study previously mentioned, the purpose of my study was to examine and determine the types of bacterial communities harbored on the floor of the Bart and Muni. Particularly, my primary focal question for this study was “what kinds of bacteria contaminated these environments?”. Additionally, I wanted to know how drastically the diversity and abundance of the bacteria differed between the two types of public transportation in the city area. Based on these two leading questions, I hypothesized that staphylococci and other less harmful pathogens would be present in both locations. However, I believe that the diversity will be larger in the Muni due to the lack of maintenance and high volumes of passengers on a day-to-day basis. 
+	In order to test these hypotheses, 3 individual swab samples were obtained from each the Muni and Bart floors. The 6 samples in total were diluted 1, 1:10, and 1:100 respectively and cultured on an agar dish. DNA from the 6 most isolated colonies were extracted and amplified through PCR.  Gel electrophoresis was utilized in order to separate these DNA fragments according to the size and charge. Lastly, unidirectional Sanger sequencing allowed for the further analysis of the specific DNA composition. The successful sequences were BLASTed, determining what types of microbial strains were present within the colony samples. 
+	The primary findings of this study revealed that the Muni contained significantly more colonies after culturing. These abundant colonies from the Muni were also more diverse in morphotypes compared to the cultured Bart samples. According to the molecular data, both Bart 1 diluted 1:10 and 1:100 possessed Microbacterium strains and Bart 2 1:100 contained Acinetobacter schindleri strain. Muni 2 1:10 also contained a strain of Acinetobacter and Muni 3 1:100 contained Marinobacterium.
+
 
 # Methods
 
@@ -20,6 +27,77 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Analysis
 
 # Results
+
+```{r load-libraries}
+library("ggplot2")
+library("dplyr")
+library("tidyr")
+library("readr")
+library("broom")
+library("knitr")
+```
+
+```{r read-in-culture-data}
+# read in the culture data from csv
+culture_data <- read_csv("data/raw_data/raw_culture_count_data/BIOL422_culturing_data - Sheet1 (2).csv")
+```
+
+```{r filter-and-plot-abundances}
+# filter out only my 100x dilutions and make a boxplot
+culture_data %>%
+  filter(student_name == "Jacqueline Imperial")%>%
+  filter(dilution_1_10_or_100 == "10") %>%
+  ggplot(aes(x = sample_group,
+             y = number_of_colonies)) +
+  geom_boxplot() +
+  ggtitle("Comparison of Colony Abundances Between BART and Municipal Railway",
+                "10x Dilution") +
+  xlab("Sample Group") +
+  ylab("Number of Colonies")
+```
+
+**Figure 1:** Boxplot of colony abundances at different sites, 10x dilution. Despite a higher median number of colonies from the Municipal Railway samples, the mean values of colonies were not significantly different between the two sites (Wilcox p = 0.82)
+
+```{r abundances-stats}
+# run a statistical test to compare the two groups of abundances
+culture_data %>%
+  filter(student_name == "Jacqueline Imperial")%>%
+  filter(dilution_1_10_or_100 == "10") %>%
+  wilcox.test(data = .,
+              number_of_colonies ~ sample_group) %>%
+  broom::glance(x = .) %>%
+  knitr::kable()
+```
+
+```{r filter-and-plot-morphotypes}
+# filter out only my 100x dilutions and make a boxplot
+culture_data %>%
+  filter(student_name == "Jacqueline Imperial")%>%
+  filter(dilution_1_10_or_100 == "10") %>%
+  ggplot(aes(x = sample_group,
+             y = as.numeric(number_of_morphotypes))) +
+  geom_boxplot() +
+  ggtitle("Comparison of Morphotypes Between BART and Municipal Railway",
+                "10x Dilution") +
+  xlab("Sample Group") +
+  ylab("Number of Morphotypes")
+```
+
+**Figure 2:** Boxplot showing the number of morphotypes from the two different sites. There was a difference in the mean number of morphotypes, W = 1 and p = 0.16
+
+```{r morphotypes-stats}
+# run a statistical test to compare the two groups of abundances
+culture_data %>%
+  filter(student_name == "Jacqueline Imperial")%>%
+  filter(dilution_1_10_or_100 == "10") %>%
+  wilcox.test(data = .,
+              as.numeric(number_of_morphotypes) ~ sample_group) %>%
+  broom::glance(x = .) %>%
+  knitr::kable()
+```
+
+
+## Culture Data
 
 ## Subsections are ok in the results section too
 
