@@ -24,6 +24,19 @@ Bacterial microbes present in urban locations have been a major public health is
 
 ## Study design
 
+## Sample Extraction
+
+Materials required for the extraction of samples were 12 1.5mL tubes and swabs, gloves, zip block bags, and sterile phosphate-buffered saline (PBS). All samples were collected on the evening of September 3, 2019. For the Bart, samples were obtained from the Richmond train, from three different carts. The Muni samples were extracted from three difference buses on the 5R route. I specifically obtained all samples from the entrances of all trains and buses, where foot-traffic is the greatest. Two swab samples were taken from each specific location. First, the sterile swab was dipped and moistened into the sterile PBS before gathering the sample from the floor. The floor surface was then gently wiped with one end of the swab. The swab was placed into its designated labeled tube, and the long end of the swab was broken off in order to fit in the tube. Each Bart sample was labeled B1, B2, and B3. The Muni samples were labeled M1, M2, M3 respectively.
+
+## Culturing and Plating
+
+	24 hours after extraction,  samples were diluted and cultured. Before plating, all 6 samples were diluted 1:1, 1:10, and 1:100. The dilutions were created with the samples and designated amounts of PBS. In order to culture all 18 samples and their dilutions, 100μl of each sample was pipetted onto a 100mm tryptic soy agar (TSA) plate. The sample was spread onto the surface with the use of rattler beads. All 18 samples were then incubated for approximately 4 days before the analysis of colony abundance and morphotypes. Observations were recorded.
+	DNA was extracted from the cultures with the most isolated colonies. These 6 target colonies derived from B1 1:10, B1 1:100, B2 1:100, M2 1:10, M3 1:10, and M3 1:100. For DNA extraction, I followed the manufacturer’s protocol from the Sigma REDExtract-N-Amp kit. Afterwards, Qubit was used to quantify the target colony DNA extractions. 198μl of Qubit solution was added to each Qubit tube. 2μl of the DNA extraction was added, vortexed for 5 seconds, and incubated for 5 minutes in the dark. The Qubit machine quantified each sample and the concentration (ng/μl) was recorded. 
+	During the following week, a PCR procedure was utilized in order to amplify the DNA extractions. A sterile tube was labeled for the master mix. Volumes of reagents needed for the master mix were calculated using (n+1) + 10%, where n=7. The master mix contained; 77μl Amp, 6.16μl 27f primer, 6.16μl 1492r primer, 7.7μl BSA, and 49.28μl H_2 O. 19μl of the master mix was aliquoted into all sample tubes and negative control tube. 1μl of DNA extraction sample was pipetted into its designated tube and 1μl H_2 O was added to the negative control. The  PCR cycle ran overnight. The PCR ran at 95º C for 5 minutes in order to denature and separate the long DNA strands. The temperature was then lowered to 94º C for 30 seconds to allow for more denaturation. Temperature was further lowered to 65º C for 30 seconds, which is critical for annealing and for the primers to sit on the DNA. The temperature was increased again to 72º C for 1 minute for extension and elongation by DNA polymerase. The temperature was raised to 95º C for 30 seconds, 55º C for 30 seconds, and 72º C for 1 minute for a total of 25 cycles. Afterwards, the temperature was held at 72º C for 10 minutes and held 4º C. The touchdown PCR contained 2% agarose gel and SYBR safe dye. The PCR gel image was taken and observations were recorded based on the brightness of the band. Following the PCR, the products were run on a gel electrophoresis  gel at 140v for 30 minutes in order to separate the DNA fragments according to their size and charge.
+	After checking for successful amplification from PCR utilizing gel electrophoresis, PCR products were cleaned using Invitrogen Exo-SAP (Exonuclease – Shrimp Alkaline Phosphatase). They were then sent for unidirectional Sanger sequencing at MCLAB in South San Francisco, CA. The Sanger sequencing results were finalized and sent back the following day. Cleaning and trimming 
+
+
+
 ## Analysis
 
 # Results
@@ -45,7 +58,7 @@ culture_data <- read_csv("data/raw_data/raw_culture_count_data/BIOL422_culturing
 ```{r filter-and-plot-abundances}
 # filter out only my 100x dilutions and make a boxplot
 culture_data %>%
-  filter(student_name == "Jacqueline Imperial")%>%
+  filter(student_name == "Jacqueline Imperial") %>% 
   filter(dilution_1_10_or_100 == "10") %>%
   ggplot(aes(x = sample_group,
              y = number_of_colonies)) +
@@ -61,7 +74,7 @@ culture_data %>%
 ```{r abundances-stats}
 # run a statistical test to compare the two groups of abundances
 culture_data %>%
-  filter(student_name == "Jacqueline Imperial")%>%
+  filter(student_name == "Jacqueline Imperial") %>% 
   filter(dilution_1_10_or_100 == "10") %>%
   wilcox.test(data = .,
               number_of_colonies ~ sample_group) %>%
@@ -72,7 +85,7 @@ culture_data %>%
 ```{r filter-and-plot-morphotypes}
 # filter out only my 100x dilutions and make a boxplot
 culture_data %>%
-  filter(student_name == "Jacqueline Imperial")%>%
+  filter(student_name == "Jacqueline Imperial") %>% 
   filter(dilution_1_10_or_100 == "10") %>%
   ggplot(aes(x = sample_group,
              y = as.numeric(number_of_morphotypes))) +
@@ -88,7 +101,7 @@ culture_data %>%
 ```{r morphotypes-stats}
 # run a statistical test to compare the two groups of abundances
 culture_data %>%
-  filter(student_name == "Jacqueline Imperial")%>%
+  filter(student_name == "Jacqueline Imperial") %>% 
   filter(dilution_1_10_or_100 == "10") %>%
   wilcox.test(data = .,
               as.numeric(number_of_morphotypes) ~ sample_group) %>%
