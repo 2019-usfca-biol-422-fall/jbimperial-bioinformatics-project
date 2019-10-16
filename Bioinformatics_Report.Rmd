@@ -1,8 +1,13 @@
 ---
-title: 'Nonpathogenic Bacterial Microbes Present in San Francisco Public Transportation – BART and Muni'
+title: Nonpathogenic Bacterial Microbes Present in San Francisco Public Transportation
+  – BART and Muni
 author: "Jacqueline Imperial"
 date: "October 16, 2019"
-output: word_document
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+  word_document: default
 csl: bioinformatics.csl
 bibliography: references.bib
 ---
