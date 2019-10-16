@@ -7,6 +7,12 @@ csl: bioinformatics.csl
 bibliography: references.bib
 ---
 
+#Introduction
+
+#Methods
+
+#
+
 # Overview of Proposed Project 
 
 The project I am planning will examine bacteria on the surfaces of public transportation within the Bay Area. I will specifically obtain 3 samples from the floor of different SF muni buses and Bart cars.
@@ -34,7 +40,7 @@ Both the environments will be contaminated with staphylococci and other pathogen
 
 ### Materials Required
 
-* 6 sterile swabs
+* 6 sterile swabs 
 * 6 individual tubes
 * sterile gloves
 * buffer
