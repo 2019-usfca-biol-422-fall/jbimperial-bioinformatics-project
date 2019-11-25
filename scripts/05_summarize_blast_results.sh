@@ -1,3 +1,4 @@
+#!/bin/bash
 # use cut, sort, and uniq -c to help you summarize the results from the
 # BLAST search.
 for file in /data/my-illumina-sequences/blast_output/*.csv
