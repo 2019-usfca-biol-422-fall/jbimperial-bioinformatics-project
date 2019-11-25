@@ -38,7 +38,7 @@ microbial communities in micro-locations of public transportation harboring
 abundant bacteria. These locations included hand-touch surfaces, such as 
 handrails and doors, seats, and the floor. The findings of this particular 
 study found that the majority of bacteria was located on the floor 
-[@yeh2011diversity].Numerous othersimilar research has been done in in 
+[@yeh2011diversity]. Numerous othersimilar research has been done in in 
 different cities such as London and Seoul in order to investigate the 
 culturable airborne bacterial and fungal communitiesin public transportation 
 locations [@hwang2014comparison].
@@ -80,7 +80,7 @@ different taxa within the abundant microbiome [@monger2017bioinformatics].
 The primary findings of this study from the culture samples revealed that the 
 Muni contained more colonies after culturing. These abundant colonies from the
 Muni were also more diverse in morphotypes compared to the cultured BART 
-samples. Accordingto the molecular data, both BART 1 diluted 1:10 and 1:100 
+samples. According to the molecular data, both BART 1 diluted 1:10 and 1:100 
 possessed *Microbacterium* strains and BART 2 1:100 contained 
 *Acinetobacter schindleri* strain. Muni 2 1:10 also contained a strain of 
 *Acinetobacter* and Muni 3 1:100 contained *Marinobacterium* 
@@ -140,13 +140,13 @@ mix into all sample tubes and the negative control tube. Additionally, I
 pipetted 1μl of DNA extraction sample into its designated tube and 1μl H2O into
 the negative control. The automated PCR cycles ran overnight. The PCR ran at 
 95º C for 5 minutes in order to denature and separate the long DNA strands. 
-The temperature was then lowered to 94º C for 30 seconds. Temperature was 
-further lowered to 65º C for 30 seconds, which is critical for annealing and 
+The temperature was then lowered to 94ºC for 30 seconds. Temperature was 
+further lowered to 65ºC for 30 seconds, which is critical for annealing and 
 for the primers to sit on the DNA. The temperature was increased again to 
-72º C for 1 minute for extension and elongation by DNA polymerase. The
-temperature was raised to 95º C for 30 seconds, 55º C for 30 seconds, and 
-72º C for 1 minute for a total of 25 cycles. Afterwards, the temperature was
-held at 72º C for 10 minutes and held 4º C. The touchdown PCR contained 2% 
+72ºC for 1 minute for extension and elongation by DNA polymerase. The
+temperature was raised to 95ºC for 30 seconds, 55ºC for 30 seconds, and 
+72ºC for 1 minute for a total of 25 cycles. Afterwards, the temperature was
+held at 72ºC for 10 minutes and held 4ºC. The touchdown PCR contained 2% 
 agarose gel, SYBR safe dye, and TAE buffer. After the PCR image was taken, I 
 recorded all observations based on the brightness or faintness of the band. 
 Following the PCR, I ran the products on a gel electrophoresis gel at 140 volts 
@@ -171,7 +171,7 @@ culture sample procedure, I calculated the necessary volumes of reagents needed
 using (n+1) + 10%, where n=7. The culture-free master mix contained 77μl Amp, 
 6.2μl iseq 16SF, 6.2μl iseq 16R, 7.7 BSA, 50μl H2O, and, 1μl of the DNA 
 extraction. The negative control sample contained 1μl of H2O instead. The 
-automated PCR cycles ran at 95º C for 3 minutes, 95ºC for 30 more seconds, 
+automated PCR cycles ran at 95ºC for 3 minutes, 95ºC for 30 more seconds, 
 lowered to 55ºC for 30 seconds, 72ºC for an additional 30 seconds, and 72ºC 
 for 5 minutes. Lastly, the PCR products were finally held at a temperature of
 4ºC. I repeated this automated process  for a total of 25 cycles, allowing for
@@ -204,7 +204,7 @@ cartridge.
 
 In order to clean and trim the culture sequences, I used Geneious software for 
 data analysis. The alignment program used is MAFFT, which is a fast and
-accurate multiple sequence alignment program in Geneious[@katoh2009multiple].
+accurate multiple sequence alignment program in Geneious [@katoh2009multiple].
 I first viewed all samples to determine which ones were successful and which 
 can be cleaned and analyzed through BLAST. I then began the process of trimming
 the successful samples by taking out the beginning and ends of the sequence. 
@@ -462,17 +462,17 @@ lack of maintenance and cleanliness of the city buses as well as the high
 volume of people going through that specific form of transportation.
 
 According to my results, specifically the boxplot of the comparison between 
-colony abundances between the two treatments in the 10x dilution in Figure 2, 
+colony abundances between the two treatments in the 10x dilution in Figure 3`, 
 the abundances did not vary significantly. Despite the high median value of 
 colony abundance in the Muni samples, the mean values are not significantly 
 different. Also, because the p-value is 0.82, I fail to reject the null 
 hypothesis which states that both treatment abundances are similar. Moreover,
-the boxplot depicted in Figure 3 shows a comparison between the morphotypes of
+the boxplot depicted in Figure 4 shows a comparison between the morphotypes of
 the two treatments in the 10x dilution as well. Although both the mean and
 median vary greatly according to the boxplot, the p-value equals 0.16. Due to 
 these results, I fail to reject the null hypothesis, which states that the 
 morphotypes between BART and Muni are the same. Therefore, the results from 
-Figure 2 and 3 reveal that the bacterial communities growing on the BART and 
+Figure 3 and 4 reveal that the bacterial communities growing on the BART and 
 Muni floor surfaces do not greatly differ in abundance and diversity.
 	
 Factors that may influence these findings may be that the same groups of people
@@ -491,7 +491,7 @@ by other similar studies.
 My second question for this study addressed the contents of the bacteria on 
 the floor and what strains existed in these locations. After cleaning and 
 trimming the Sanger Sequencing data and matching it with BLAST results, I 
-discovered the taxa in such locations. According to Table 3 of my results, I 
+discovered the taxa in such locations. According to Table 4 of my results, I 
 found that the majority of taxa were *Microbacterium*  and *Acinetobacter*
 strains. Both strains are nonpathogenic and mostly not harmful for human 
 health. These taxa findings greatly differed from the findings of studies in
