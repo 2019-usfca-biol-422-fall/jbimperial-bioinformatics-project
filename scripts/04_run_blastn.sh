@@ -1,3 +1,4 @@
+shellcheck --shell=bash without-shebang.sh
 # run blast against the local database to find the top match for each of the
 # sequences in your SUBSAMPLED fastq files
 # options and what they're for:
