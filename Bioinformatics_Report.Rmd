@@ -421,7 +421,7 @@ B1 1:10 contains *Macrobacterium phyllosphaerae* strain. B1 1:100 contains
 *Microbacterium hydrocarbonoxydans* strain, B2 1:100 has
 *Acinetobacter schindleri* strain, M2 1:100 has *Acinetobacter sp.* strain, 
 and M3 1:100 contains a *Marinobacterium sp* MB3 gene. M3 1:10 and the 
-negativecontrol were failed sequences (Table 4). 
+negativecontrol were failed sequences (Table 4).
 
 | Sample I.D.      | Description                                                                             | Percent Identity | Query Cover | E-Value | Accession  |
 |------------------|-----------------------------------------------------------------------------------------|------------------|-------------|---------|------------|
