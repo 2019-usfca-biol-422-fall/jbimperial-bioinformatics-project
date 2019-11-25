@@ -395,7 +395,7 @@ sequences after trimming and cleaning, and the manual corrections made
 | 16S            | JI_M3_1_100_27f_F06.ab1 | JI_M3_1_100_27f_F06_JI_cleaned_failed_blast.ab1 | Usable    | 824                   | 3                            |
 | 16S            | JI_neg_27f_G06.ab1      | JI_neg_27f_G06_JI_failed.ab1                    | Unusable  | 5                     | 0                            |
 
-**Table 3:** Sequence analysis after cleaning and trimming using MAFFT in Geneious. 
+**Table 3:** Sequence analysis after cleaning and trimming using MAFFT in Geneious.
 
 
 Figure 5 shows the Maximum Likelihood Phylogeny of the successful samples.
