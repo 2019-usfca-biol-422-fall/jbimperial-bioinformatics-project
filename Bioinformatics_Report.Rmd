@@ -237,214 +237,61 @@ carried out through scripts in terminal.
 After quantifying DNA PCR products with Qubit, DNA concentrations from BART 
 significantly varied for the culture data, ranging approximately 5.92-34.1 
 ng/μl. However, concentrations from Muni were consistent around 8.00-9.00 ng/μl 
-(Table 1). 
-Table 2 showed that Qubit DNA concentrations also varied among culture-free 
+(Table 1).
+The Qubit DNA concentrations also varied among culture-free 
 samples, ranging from ~4.0-10.0 ng/μl. The lowest concentration was 4.44 ng/μl 
-and the highest was 10.0 ng/μl.
-
-
-| Sample I.D. | Sample Group      | Sample Dilution I.D. | DNA Concentration (ng/μl) |
-|-------------|-------------------|----------------------|---------------------------|
-| B1          | BART              | 10                   | 34.1                      |
-| B1          | BART              | 100                  | 11.5                      |
-| B2          | BART              | 100                  | 5.92                      |
-| M2          | Municipal Railway | 10                   | 8.27                      |
-| M3          | Municipal Railway | 10                   | 8.33                      |
-| M3          | Municipal Railway | 100                  | 8.37                      |
-**Table 1:** Table of Qubit culture DNA concentration results. BART DNA 
-concentrations signficantly vary, however dsDNA concentrations were sufficient 
-for PCR.
-
-| Sample I.D.      | Sample Group      | DNA Concentration (ng/μl) |
-|------------------|-------------------|---------------------------|
-| B1               | BART              | 4.90                      |
-| B2               | BART              | 8.48                      |
-| B3               | BART              | 5.28                      |
-| M1               | Municipal Railway | 10.0                      |
-| M2               | Municipal Railway | 6.98                      |
-| M3               | Municipal Railway | 5.94                      |
-| Negative Control |                   | 4.44                      |
-**Table 2:** Table of Qubit culture-free dsDNA concentration results measured
-in (ng/μl).
+and the highest was 10.0 ng/μl (Table 2).
 
  DNA product is present within most samlpes except for the negative control
- wells. Figure 1 is an image of the PCR bands from the culture products and 
- Figure 2 shows the image of the culture-free PCR bands. According to the image
- of culture PCRs derived from the DNA extractions depicted Figure 1 and 
- Figure 2, the majority of the samples contain faint, but distinguishable, 
- bands and ~200 to 300bp in reference to the ladder located in the far right 
- lane (Figure 1).In Figure 1, M3 1:10 is the only faint band and the rest of 
- the bands are relatively normal-bright. Figure 2 indicates that B1, B3, and 
- M3 are faint and B2, M1, and M2 are bright (Figure 2). All PCR products were
- sufficient for later analysis. 
+ wells. Two separate images of the PCR bands from the culture and culture-free 
+ products show the presence of PCR product. According to the image
+ of culture PCRs derived from the DNA extractions, the majority of the samples
+ contain faint, but distinguishable, bands and ~200 to 300bp in reference to the 
+ ladder located in the far right lane (Figure 1). M3 1:10 is the 
+ only faint band and the rest of the bands are relatively normal-bright 
+ (Figure 1). For the culture-free samples, B1, B3, and M3 are faint and B2, M1, 
+ and M2 are bright (Figure 2). All PCR products were
+ sufficient for later analysis.
 
-![](images/Culture_PCR.jpg)
-**Figure 1:** Image of culture PCRs from DNA extractions of most abundant and 
-isolated colonies. The ladder indicates that the sequences are approximately 
-300bp.
-
-![](images/2019-09-18_culturefree_PCRs_modified.jpg)
-**Figure 2:** Image of culture-free PCRs from all 6 original DNA extractions. 
-The ladder is located on the right, indicated that sequences are approximately 
-200bp.
-
-
-
-```{r load-libraries}
-# load libraries ggplot2, dplyr, tidyr, readr, broom, and knitr
-library("ggplot2")
-library("dplyr")
-library("tidyr")
-library("readr")
-library("broom")
-library("knitr")
-```
-
-Figure 3 shows a boxplot of the culture 10x dilution colony abundances in each 
-treatments, BART and Muni. The mean values of colonies were not significantly 
-different between the two sites according to the statistic value which is 3.5 
-and the Wilcox p-value which is 0.82 for both treatments (Figure 3). Figure 4 
-also depicts a boxplot, but of the number of morphotypes in the 10x diluted 
-colonies for both treatments. From this, there was a difference between the
-number of morphortypes according to the Wilcox = 1 and p-value = 0.16 
-(Figure 4).
-
-
-```{r read-in-culture-data}
-# read in the culture data from csv
-culture_data <- read_csv(
-  "data/raw_data/raw_culture_count_data/BIOL422_culturing_data.csv")
-```
-
-```{r filter-and-plot-abundances}
-# filter out only my 100x dilutions and make a boxplot
-culture_data %>%
-  filter(student_name == "Jacqueline Imperial") %>%
-  filter(dilution_1_10_or_100 == "10") %>%
-  ggplot(aes(x = sample_group,
-             y = number_of_colonies)) +
-  geom_boxplot() +
-  ggtitle("Comparison of Colony Abundances Between BART and Municipal Railway",
-                "10x Dilution") +
-  xlab("Sample Group") +
-  ylab("Number of Colonies")
-```
-
-**Figure 3:** Boxplot of colony abundances at different sites, 10x dilution. 
-Despite a higher median number of colonies from the Municipal Railway samples,
-the mean values of colonies were not significantly different between the two
-sites (Wilcox p = 0.82)
-
-```{r abundances-stats}
-# run a statistical test to compare the two groups of abundances
-culture_data %>%
-  filter(student_name == "Jacqueline Imperial") %>%
-  filter(dilution_1_10_or_100 == "10") %>%
-  wilcox.test(data = .,
-              number_of_colonies ~ sample_group) %>%
-  broom::glance(x = .) %>%
-  knitr::kable()
-```
-
-```{r filter-and-plot-morphotypes}
-# filter out only my 100x dilutions and make a boxplot
-culture_data %>%
-  filter(student_name == "Jacqueline Imperial") %>%
-  filter(dilution_1_10_or_100 == "10") %>%
-  ggplot(aes(x = sample_group,
-             y = as.numeric(number_of_morphotypes))) +
-  geom_boxplot() +
-  ggtitle("Comparison of Morphotypes Between BART and Municipal Railway",
-                "10x Dilution") +
-  xlab("Sample Group") +
-  ylab("Number of Morphotypes")
-```
-
-**Figure 4:** Boxplot showing the number of morphotypes from the two different
-sites. There was a difference in the mean number of morphotypes, W = 1 and
-p = 0.16
-
-```{r morphotypes-stats}
-# run a statistical test to compare the two groups of abundances
-culture_data %>%
-  filter(student_name == "Jacqueline Imperial") %>%
-  filter(dilution_1_10_or_100 == "10") %>%
-  wilcox.test(data = .,
-              as.numeric(number_of_morphotypes) ~ sample_group) %>%
-  broom::glance(x = .) %>%
-  knitr::kable()
-```
-
+A boxplot indicates the culture 10x dilution colony abundances in each 
+treatments, BART and Muni (Figure 3). The mean values of colonies were not 
+significantly different between the two sites according to the statistic 
+value which is 3.5 and the Wilcox p-value which is 0.82 for both treatments 
+(Figure 3). An additional boxplot indicates the number of morphotypes in the 
+10x diluted colonies for both treatments. From this, there was a difference 
+between thenumber of morphortypes according to the Wilcox = 1 and p-value 
+= 0.16 (Figure 4).
 
 After Sanger sequencing, the samples’ sequences were cleaned and trimmed
-through Geneious's MAFFT alignment program. Table 3 reveals all samples’ loci
-were 16S. After analysis, B1 1:10, B1 1:100. B2 1:100, and M3 1:100 were 
-determined usable and M2 1:10 and the negative control were not usable for the 
-next step of BLAST analysis. Table 3 also indicated the lengths of the 
-sequences after trimming and cleaning, and the manual corrections made 
-(Table 3).
+through Geneious's MAFFT alignment program. All samples’ loci
+were 16S (Table 3). After analysis, B1 1:10, B1 1:100. B2 1:100, and M3 1:100
+were determined usable and M2 1:10 and the negative control were not usable 
+for the next step of BLAST analysis. The lengths of the sequences after 
+trimming and cleaning, and the manual corrections made are also changed 
+after alignment (Table 3).
 
-
-| Sequence Locus | Original Filename       | Filename after Correction                       | Usability | Length After Trimming | Number of Manual Corrections |
-|----------------|-------------------------|-------------------------------------------------|-----------|-----------------------|------------------------------|
-| 16S            | JI_B1_1_10_27f_A06.ab1  | JI_B1_1_10_27f_A06_JI_cleaned_mixed.ab1         | Usable    | 280                   | 1                            |
-| 16S            | JI_B1_1_100_27f_B06.ab1 | JI_B1_1_100_27f_B06_JI_cleaned.ab1              | Usable    | 771                   | 1                            |
-| 16S            | JI_B2_1_100_27f_C06.ab1 | JI_B2_1_100_27f_C06_JI_cleaned.ab1              | Usable    | 609                   | 4                            |
-| 16S            | JI_M2_1_10_27f_D06.ab1  | JI_M2_1_10_27f_D06_JI_cleaned.ab1               | Usable    | 633                   | 1                            |
-| 16S            | JI_M3_1_10_27f_E06.ab1  | JI_M3_1_10_27f_E06_JI_failed.ab1                | Unusable  | 5                     | 0                            |
-| 16S            | JI_M3_1_100_27f_F06.ab1 | JI_M3_1_100_27f_F06_JI_cleaned_failed_blast.ab1 | Usable    | 824                   | 3                            |
-| 16S            | JI_neg_27f_G06.ab1      | JI_neg_27f_G06_JI_failed.ab1                    | Unusable  | 5                     | 0                            |
-
-**Table 3:** Sequence analysis after cleaning and trimming using MAFFT in Geneious.
-
-
-Figure 5 shows the Maximum Likelihood Phylogeny of the successful samples.
+The Maximum Likelihood Phylogeny shows the phylogeny of the successful samples.
 M2 1:10 and B2 1:100 are more closely related than B1 1:100. The bootstrap 
-value is 100 and the posterior probability value is 0.06 (Figure 5). Figure 6
-shows a Bayesian Phylogeny between these same samples. The figure indicates 
-similar results as the phylogeny. The bootstrap value is 1 and the Bayesian 
-posterior probability is 0.07 (Figure 6).
-
-![](output/phylogenies/sanger_sequences_phyml_phylogeny.png)
-**Figure 5:** Maximum Likelihood Phylogeny of the three most successful samples
-with the root being *Thermus aquaticus*. M2 1:10 and B2 1:100 are more closely 
-related than B1 1:100, with a bootstrap of 100. 
-
-![](output/phylogenies/sanger_sequences_mrbayes.png)
-**Figure 6:** A Bayesian Phylogeny indicating that sample B2 1:100 and M2 1:10
-are closely related with bootstrap 1 and Bayesian posterior probability of 
-0.07.
+value is 100 and the posterior probability value is 0.06 (Figure 5). A Bayesian
+Phylogeny is also indicatedbetween these same samples. The Bayesian Tree
+indicates similar results as the phylogeny. The bootstrap value is 1 and 
+the Bayesian posterior probability is 0.07 (Figure 6).
 
 Lastly, the results of Nucleotide BLAST revealed which strains predominated 
-within each sample colonies, indicated by Table 4. From this, I discovered that
+within each sample colonies (Table 4). From this, I discovered that
 B1 1:10 contains *Macrobacterium phyllosphaerae* strain. B1 1:100 contains
 *Microbacterium hydrocarbonoxydans* strain, B2 1:100 has
 *Acinetobacter schindleri* strain, M2 1:100 has *Acinetobacter sp.* strain, 
 and M3 1:100 contains a *Marinobacterium sp* MB3 gene. M3 1:10 and the 
-negativecontrol were failed sequences (Table 4).
+negativecontrol were failed sequences.
 
-| Sample I.D.      | Description                                                                             | Percent Identity | Query Cover | E-Value | Accession  |
-|------------------|-----------------------------------------------------------------------------------------|------------------|-------------|---------|------------|
-| B1 1:10          | *Microbacterium phyllosphaerae* strain Y137 16S ribosomal RNA gene, partial sequence      | 100%             | 100%        | 6e-143  | MN477985.1 |
-| B1 1:100         | *Microbacterium hydrocarbonoxydans* strain T11.3 16S ribosomal RNA gene, partial sequence | 99.87%           | 99%         | 0.0     | MN198007.1 |
-| B2 1:100         | *Acinetobacter schindleri* strain H3 chromosome, complete genome                          | 99.34%           | 100%        | 0.0     | CP030754.1 |
-| M2 1:10          | *Acinetobacter sp.* strain YX3 16S ribosomal RNA gene, partial sequence                   | 99.84%           | 99%         | 0.0     | MK138620.1 |
-| M3 1:10          | Sequence Failed                                                                         |                  |             |         |            |
-| M3 1:100         | *Marinobacterium sp.* MB3 gene for 16S rRNA, partial sequence                             | 76.74%           | 36%         | 2e-38   | AB490785.1 |
-| Negative Control | Sequence Failed                                                                         |                  |             |         |            |
-**Table 4:** A table of BLAST results from Sanger Sequence samples. The table 
-indicates which strains are present in the bacterial colonies. 
-
-```{r your-code-here}
-# Add code chunks as needed for analyses
-```
 After running FastQC Reports on all the 6 culture-free data, I was able the 
 sequence quality for all samples. 0 sequences were flagged as poor quality in 
 samples B1, B2, B3, M1, M2, and M3. Sample B1 contained 5014 sequences and
 147-151 sequence length, B2 contained 7668 sequences and the same sequence 
 length, B3 had 4990 sequences and the same sequence length, M1 had 7573 
 sequences and 51-151 sequence length, M2 had 10693 sequences and 43-151 
-sequence length, and lastly M3 had 14803 sequences and 43-151 sequence length. 
+sequence length, and lastly M3 had 14803 sequences and 43-151 sequence length.
 
 
 # Discussion
@@ -519,5 +366,161 @@ Overall, this study revealed that nonpathogenic bacterial communities grow on
 the floor public transportation in the San Francisco community. This indicates 
 the improvement of maintenance within the city’s public locations. It also may
 reveal the future improvement of public health overall. 
+
+# Figures and Tables
+```{r load-libraries}
+# load libraries ggplot2, dplyr, tidyr, readr, broom, and knitr
+library("ggplot2")
+library("dplyr")
+library("tidyr")
+library("readr")
+library("broom")
+library("knitr")
+```
+
+| Sample I.D. | Sample Group      | Sample Dilution I.D. | DNA Concentration (ng/μl) |
+|-------------|-------------------|----------------------|---------------------------|
+| B1          | BART              | 10                   | 34.1                      |
+| B1          | BART              | 100                  | 11.5                      |
+| B2          | BART              | 100                  | 5.92                      |
+| M2          | Municipal Railway | 10                   | 8.27                      |
+| M3          | Municipal Railway | 10                   | 8.33                      |
+| M3          | Municipal Railway | 100                  | 8.37                      |
+**Table 1:** Table of Qubit culture DNA concentration results. BART DNA 
+concentrations signficantly vary, however dsDNA concentrations were sufficient 
+for PCR.
+
+| Sample I.D.      | Sample Group      | DNA Concentration (ng/μl) |
+|------------------|-------------------|---------------------------|
+| B1               | BART              | 4.90                      |
+| B2               | BART              | 8.48                      |
+| B3               | BART              | 5.28                      |
+| M1               | Municipal Railway | 10.0                      |
+| M2               | Municipal Railway | 6.98                      |
+| M3               | Municipal Railway | 5.94                      |
+| Negative Control |                   | 4.44                      |
+**Table 2:** Table of Qubit culture-free dsDNA concentration results measured
+in (ng/μl).
+
+
+![](images/Culture_PCR.jpg)
+**Figure 1:** Image of culture PCRs from DNA extractions of most abundant and 
+isolated colonies. The ladder indicates that the sequences are approximately 
+300bp.
+
+![](images/2019-09-18_culturefree_PCRs_modified.jpg)
+**Figure 2:** Image of culture-free PCRs from all 6 original DNA extractions. 
+The ladder is located on the right, indicated that sequences are approximately 
+200bp.
+
+
+```{r read-in-culture-data}
+# read in the culture data from csv
+culture_data <- read_csv(
+  "data/raw_data/raw_culture_count_data/BIOL422_culturing_data.csv")
+```
+
+```{r filter-and-plot-abundances}
+# filter out only my 100x dilutions and make a boxplot
+culture_data %>%
+  filter(student_name == "Jacqueline Imperial") %>%
+  filter(dilution_1_10_or_100 == "10") %>%
+  ggplot(aes(x = sample_group,
+             y = number_of_colonies)) +
+  geom_boxplot() +
+  ggtitle("Comparison of Colony Abundances Between BART and Municipal Railway",
+                "10x Dilution") +
+  xlab("Sample Group") +
+  ylab("Number of Colonies")
+```
+
+**Figure 3:** Boxplot of colony abundances at different sites, 10x dilution. 
+Despite a higher median number of colonies from the Municipal Railway samples,
+the mean values of colonies were not significantly different between the two
+sites (Wilcox p = 0.82)
+
+```{r abundances-stats}
+# run a statistical test to compare the two groups of abundances
+culture_data %>%
+  filter(student_name == "Jacqueline Imperial") %>%
+  filter(dilution_1_10_or_100 == "10") %>%
+  wilcox.test(data = .,
+              number_of_colonies ~ sample_group) %>%
+  broom::glance(x = .) %>%
+  knitr::kable()
+```
+
+```{r filter-and-plot-morphotypes}
+# filter out only my 100x dilutions and make a boxplot
+culture_data %>%
+  filter(student_name == "Jacqueline Imperial") %>%
+  filter(dilution_1_10_or_100 == "10") %>%
+  ggplot(aes(x = sample_group,
+             y = as.numeric(number_of_morphotypes))) +
+  geom_boxplot() +
+  ggtitle("Comparison of Morphotypes Between BART and Municipal Railway",
+                "10x Dilution") +
+  xlab("Sample Group") +
+  ylab("Number of Morphotypes")
+```
+
+**Figure 4:** Boxplot showing the number of morphotypes from the two different
+sites. There was a difference in the mean number of morphotypes, W = 1 and
+p = 0.16
+
+```{r morphotypes-stats}
+# run a statistical test to compare the two groups of abundances
+culture_data %>%
+  filter(student_name == "Jacqueline Imperial") %>%
+  filter(dilution_1_10_or_100 == "10") %>%
+  wilcox.test(data = .,
+              as.numeric(number_of_morphotypes) ~ sample_group) %>%
+  broom::glance(x = .) %>%
+  knitr::kable()
+```
+
+
+| Sequence Locus | Original Filename       | Filename after Correction                       | Usability | Length After Trimming | Number of Manual Corrections |
+|----------------|-------------------------|-------------------------------------------------|-----------|-----------------------|------------------------------|
+| 16S            | JI_B1_1_10_27f_A06.ab1  | JI_B1_1_10_27f_A06_JI_cleaned_mixed.ab1         | Usable    | 280                   | 1                            |
+| 16S            | JI_B1_1_100_27f_B06.ab1 | JI_B1_1_100_27f_B06_JI_cleaned.ab1              | Usable    | 771                   | 1                            |
+| 16S            | JI_B2_1_100_27f_C06.ab1 | JI_B2_1_100_27f_C06_JI_cleaned.ab1              | Usable    | 609                   | 4                            |
+| 16S            | JI_M2_1_10_27f_D06.ab1  | JI_M2_1_10_27f_D06_JI_cleaned.ab1               | Usable    | 633                   | 1                            |
+| 16S            | JI_M3_1_10_27f_E06.ab1  | JI_M3_1_10_27f_E06_JI_failed.ab1                | Unusable  | 5                     | 0                            |
+| 16S            | JI_M3_1_100_27f_F06.ab1 | JI_M3_1_100_27f_F06_JI_cleaned_failed_blast.ab1 | Usable    | 824                   | 3                            |
+| 16S            | JI_neg_27f_G06.ab1      | JI_neg_27f_G06_JI_failed.ab1                    | Unusable  | 5                     | 0                            |
+
+**Table 3:** Sequence analysis after cleaning and trimming using MAFFT in Geneious.
+
+
+![](output/phylogenies/sanger_sequences_phyml_phylogeny.png)
+**Figure 5:** Maximum Likelihood Phylogeny of the three most successful samples
+with the root being *Thermus aquaticus*. M2 1:10 and B2 1:100 are more closely 
+related than B1 1:100, with a bootstrap of 100. 
+
+
+![](output/phylogenies/sanger_sequences_mrbayes.png)
+**Figure 6:** A Bayesian Phylogeny indicating that sample B2 1:100 and M2 1:10
+are closely related with bootstrap 1 and Bayesian posterior probability of 
+0.07.
+
+
+| Sample I.D.      | Description                                                                             | Percent Identity | Query Cover | E-Value | Accession  |
+|------------------|-----------------------------------------------------------------------------------------|------------------|-------------|---------|------------|
+| B1 1:10          | *Microbacterium phyllosphaerae* strain Y137 16S ribosomal RNA gene, partial sequence      | 100%             | 100%        | 6e-143  | MN477985.1 |
+| B1 1:100         | *Microbacterium hydrocarbonoxydans* strain T11.3 16S ribosomal RNA gene, partial sequence | 99.87%           | 99%         | 0.0     | MN198007.1 |
+| B2 1:100         | *Acinetobacter schindleri* strain H3 chromosome, complete genome                          | 99.34%           | 100%        | 0.0     | CP030754.1 |
+| M2 1:10          | *Acinetobacter sp.* strain YX3 16S ribosomal RNA gene, partial sequence                   | 99.84%           | 99%         | 0.0     | MK138620.1 |
+| M3 1:10          | Sequence Failed                                                                         |                  |             |         |            |
+| M3 1:100         | *Marinobacterium sp.* MB3 gene for 16S rRNA, partial sequence                             | 76.74%           | 36%         | 2e-38   | AB490785.1 |
+| Negative Control | Sequence Failed                                                                         |                  |             |         |            |
+**Table 4:** A table of BLAST results from Sanger Sequence samples. The table 
+indicates which strains are present in the bacterial colonies.
+
+
+
+```{r your-code-here}
+# Add code chunks as needed for analyses
+```
 
 # Sources Cited
