@@ -1,28 +1,34 @@
 ---
-title: No Contrasting Difference in Nonpathogenic Bacterial Microbes Found in San Francisco Public Transportations – BART and Muni
+title: "*Microbacterium*, *Acinetobacter*, and Nonpathogenic Bacteria Found in Both San Francisco Public Transportations – BART and Muni"
 author: "Jacqueline Imperial"
-date: "November 18, 2019"
-output:
-  word_document: default
-  pdf_document: default
-  html_document:
-    df_print: paged
+date: "November 25, 2019"
+output: word_document
 csl: bioinformatics.csl
 bibliography: references.bib
 ---
 
 ```{r setup, include = FALSE}
+# global setup
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 ```
 
 # Introduction
 
 Bacterial microbes present in urban locations have been a major public 
-health issue especially during the peak of the flu season. These major concerns arise
-from the transfer of bacteria from person to person in public locations such as
-parks, schools, hospitals, and public transportation, all containing abundant 
-bacteria [@reynolds2005occurrence]. These bacteria may pose a threat to the 
-health of individuals due to a high probability of the bacteria being pathogenic  [@onat2017relationship]. According to numerous studies, some pathogens found in public transit include the *Staphylococcus* genus [@stepanovic2008public], commonly found on human skin, and *S. aureus*, a pathogen responsible for giving rise to Methicillin-resistant *Staphylococcus aureus*, or MRSA [@otter2009bacterial]. MRSA can cause mild infections on the skin, but some exposure may be life-threatening [@carleton2004community]. Therefore, due to this public health concern, it is crucial to analyze the possibly dangerous strains of microbial communities present and growing in such locations.
+health issue especially during the peak of the flu season. These major concerns 
+arisefrom the transfer of bacteria from person to person in public locations 
+such as parks, schools, hospitals, and public transportation, all containing 
+abundant bacteria [@reynolds2005occurrence]. These bacteria may pose a threat
+to the health of individuals due to a high probability of the bacteria being 
+pathogenic [@onat2017relationship]. According to numerous studies, some 
+pathogens found in public transit include the *Staphylococcus* genus
+[@stepanovic2008public], commonly found on human skin, and *S. aureus*, 
+a pathogen responsible for giving rise to Methicillin-resistant 
+*Staphylococcus aureus*, or MRSA [@otter2009bacterial]. MRSA can cause mild 
+infections on the skin, but some exposure may be life-threatening 
+[@carleton2004community]. Therefore, due to this public health concern, it is 
+crucial to analyze the possibly dangerous strains of microbial communities 
+present and growing in such locations.
 
 The aim of my study is to shed light on the lack of cleanliness and 
 maintenance done on public transportation in major cities such as San
@@ -30,11 +36,12 @@ Francisco’s Bay Area Rapid Transit (BART) and Municipal Railway (Muni).
 San Francisco State University’s Biology Department has recently extracted
 microbial communities in micro-locations of public transportation harboring 
 abundant bacteria. These locations included hand-touch surfaces, such as 
-handrails and doors, seats, and the floor. The findings of this particular study
-found that the majority of bacteria was located on the floor [@yeh2011diversity]. Numerous other
-similar research has been done in in different cities such as London and Seoul 
-in order to investigate the culturable airborne bacterial and fungal communities
-in public transportation locations [@hwang2014comparison].
+handrails and doors, seats, and the floor. The findings of this particular 
+study found that the majority of bacteria was located on the floor 
+[@yeh2011diversity]. Numerous othersimilar research has been done in in 
+different cities such as London and Seoul in order to investigate the 
+culturable airborne bacterial and fungal communitiesin public transportation 
+locations [@hwang2014comparison].
 
 Similar to the study previously mentioned, the purpose of my study was to 
 examine and determine the types of bacterial communities harbored on the floor
@@ -45,24 +52,39 @@ differed between the two types of public transportation in the city area.
 Based on these two leading questions, I hypothesized that *Staphylococci* and 
 other less harmful pathogens would be present in both locations. This 
 hypothesis is derived from both the lack of cleanliness from my personal 
-experiences using BART and Muni, and previous findings from similar studies  [@redman2013quality]. I also believe that the diversity will be larger in the Muni due to the lack of maintenance and very high volumes of passengers on a day-to-day basis.
+experiences using BART and Muni, and previous findings from similar studies 
+[@redman2013quality]. I also believe that the diversity will be larger in the
+Muni due to the lack of maintenance and very high volumes of passengers on a 
+day-to-day basis.
 
 In order to test these hypotheses, I obtained 3 individual swab samples from 
-each the Muni and BART floors. I performed both a culture and culture free procedure for the two different treatments of each of the 3 samples. For the culture samples. the 6 samples in total were diluted 1, 1:10, and 1:100 respectively and cultured on an agar dish. I extracted and amplified the DNA from the 6 most isolated colonies through PCR. Afterwards, I utilized 
-gel electrophoresis in order to separate these DNA fragments according to the 
+each the Muni and BART floors. I performed both a culture and culture free 
+procedure for the two different treatments of each of the 3 samples. For the 
+culture samples, the 6 samples in total were diluted 1, 1:10, and 1:100 
+respectively and cultured on an agar dish. I extracted and amplified the DNA 
+from the 6 most isolated colonies through PCR. Afterwards, I utilized gel 
+electrophoresis in order to separate these DNA fragments according to the 
 size and charge. Lastly, I used unidirectional Sanger sequencing, which allowed 
 for the further analysis of the specific DNA composition. I compared the 
-successful sequences with BLAST, which helped me determine what types of microbial strains were present within the colony samples [@griffen2011core].
+successful sequences with BLAST, which helped me determine what types of 
+microbial strains were present within the colony samples [@griffen2011core].
 
-In addition, to test the culture-free samples, I utilized PCR to amplify the sequences and add a barcode later for Illumina sequencing. I also quanitified the data through Qubit, separated the products with gel electrophoresis, and performed Illumina sequencing [@meyer2010illumina]. With the Illumina data, I used sequence analysis methods such as fastqc, trimmometric, bioawk, and BLAST to assess the quality, trim the data, and BLAST the results to determine the different taxa within the microbiome [@monger2017bioinformatics].
+In addition, to test the culture-free samples, I utilized PCR to amplify the 
+sequences and add a barcode later for Illumina sequencing. I also quanitified 
+the data through Qubit, separated the products with gel electrophoresis, and 
+performed Illumina sequencing [@meyer2010illumina]. With the Illumina data, I 
+used sequence analysis methods such as fastqc, trimmometric, bioawk, and BLAST 
+to assess the quality, trim the data, and BLAST the results to determine the 
+different taxa within the abundant microbiome [@monger2017bioinformatics].
 
-The primary findings of this study for the culture data revealed that the Muni contained more 
-colonies after culturing. These abundant colonies from the Muni were also 
-more diverse in morphotypes compared to the cultured BART samples. According
-to the molecular data, both BART 1 diluted 1:10 and 1:100 possessed
-*Microbacterium* strains and BART 2 1:100 contained *Acinetobacter schindleri* 
-strain. Muni 2 1:10 also contained a strain of *Acinetobacter* and Muni 3 1:100 
-contained *Marinobacterium* [@takeuchi1998union].
+The primary findings of this study from the culture samples revealed that the 
+Muni contained more colonies after culturing. These abundant colonies from the
+Muni were also more diverse in morphotypes compared to the cultured BART 
+samples. According to the molecular data, both BART 1 diluted 1:10 and 1:100 
+possessed *Microbacterium* strains and BART 2 1:100 contained 
+*Acinetobacter schindleri* strain. Muni 2 1:10 also contained a strain of 
+*Acinetobacter* and Muni 3 1:100 contained *Marinobacterium* 
+[@takeuchi1998union].
 
 
 
@@ -70,44 +92,155 @@ contained *Marinobacterium* [@takeuchi1998union].
 
 ## Sampling
 
-Materials required for the extraction of samples are 12 sterile 1.5mL tubes and swabs, gloves, zip block bags, and sterile phosphate-buffered saline (PBS). I collected all the samples in one day. For the BART, I obtained the samples from the Richmond train, from three different carts. I extracted the Muni samples from three difference buses on the 5R route. I specifically obtained all samples from the entrances of all trains and buses, where foot-traffic is the greatest. I took two swab samples from each specific location. First, I dipped the sterile swab to moistened it into the sterile PBS before gathering the sample from the floor. I gently whipped the floor surface for 10 seconds with one end of the swab. I placed the swab into its designated labeled tube, and broke off the long end of the swab in order to fit it in the tube. Each BART and Muni samples were labeled clearly.
+Materials required for the extraction of samples were 12 sterile 1.5mL tubes 
+and swabs, gloves, zip block bags, and sterile phosphate-buffered saline (PBS). 
+I collected all the samples on the same day. For the BART, I obtained the 
+samples from the Richmond train from three different carts. I extracted the
+Muni samples from three difference buses on the 5R route. I specifically
+obtained all samples from the entrances of all trains and buses, where
+foot-traffic is the greatest. I took two swab samples from each specific
+location. For sample collection, I first dipped the sterile swab and moistened
+it into the sterile PBS before gathering the sample from the floor. I gently
+wiped the floor surface for approximately 10 seconds with one end of the swab. 
+I placed the swab into its designated  tube, and broke off the long end of the
+swab in order to properly fit it in the tube. Each BART and Muni samples were 
+labeled appropriately.
 
 ## Culture Samples
 ### Culturing and DNA Extraction
 
-24 hours after extraction, I diluted and cultured the samples. Before plating, all 6 samples were diluted 1:1, 1:10, and 1:100. I created the dilutions with the samples and designated amounts of PBS, a buffer solution. In order to culture all 18 samples and their dilutions, I pipetted 100μl of each sample onto a plate. I used 18 100mm TSA plates for plating samples from each of my 2 treatments (n=3 per group, 6 total). I spread the sample onto the surface with the use of rattler beads. All 18 samples were then incubated for approximately 4 days before the analysis of colony abundance and morphotypes. I then recorded my observations based on the culture abundance counts and number of distinguishable morphotypes.
+24 hours after extraction, I diluted and cultured the samples. This culturing
+method required PBS, or buffer solution, 18 100mm TSA plates, and rattler
+beads. Before plating, all 6 samples were diluted 1:1, 1:10, and 1:100. I 
+created the dilutions with the samples and designated amounts of PBS. In order 
+to culture all 18 samples and and the dilutions, I pipetted 100μl of each 
+sample onto the plate. I used 18 of the 100mm TSA plates for plating samples 
+from each of my 2 treatments (n=3 per group, 6 total). In order to spread the 
+solution evenly throughout the surface of the plate, I used rattler beads. All
+18 samples were then incubated for approximately 4 days before the analysis of
+colony abundance and morphotypes. Afterwards, I then recorded my observations 
+based on the culture abundance counts and number of distinguishable morphotypes.
 	
-I extracted DNA from the cultures with the most isolated colonies. For this study, these 6 target colonies derived from B1 1:10, B1 1:100, B2 1:100, M2 1:10, M3 1:10, and M3 1:100. For DNA extraction, I followed the manufacturer’s protocol from the Sigma REDExtract-N-Amp kit [@weberextract]. Afterwards, I used Qubit to quantify the target colony DNA extractions [@haines2019detection]. The Qubit machine quantified each sample and I recorded each of the DNA concentrations in ng/μL.
+I extracted DNA from the cultures with the most isolated colonies. For this
+study, these 6 target colonies derived from B1 1:10, B1 1:100, B2 1:100,
+M2 1:10, M3 1:10, and M3 1:100. For DNA extraction, I followed the
+manufacturer’s protocol from the Sigma REDExtract-N-Amp kit [@weberextract]. 
+Afterwards, I used Qubit to quantify the target colony DNA extractions 
+[@haines2019detection]. The Qubit machine quantified each sample and I 
+recorded the DNA concentrations in ng/μL.
 
-### PCR and Gel Electrophoresis
+### PCR Amplification and Gel Electrophoresis
 
-During the following week, a PCR procedure was utilized in order to amplify the DNA extractions [@kuno1998universal]. Before beginning the protocol, I calculated the necessary volumes of reagents needed for the master mix using (n+1) + 10%, where n=7. The master mix contained; 77μl Amp, 6.16μl 27f primer, 6.16μl 1492r primer, 7.7μl BSA, and 49.28μl H_2 O. I aliquoted 19μl of the master mix into all sample tubes and negative control tube. I also pipetted 1μl of DNA extraction sample into its designated tube and 1μl H2O into to the negative control. The  automated PCR cycles ran overnight. The PCR ran at 95º C for 5 minutes in order to denature and separate the long DNA strands. The temperature was then lowered to 94º C for 30 seconds. Temperature was further lowered to 65º C for 30 seconds, which is critical for annealing and for the primers to sit on the DNA. The temperature was increased again to 72º C for 1 minute for extension and elongation by DNA polymerase. The temperature was raised to 95º C for 30 seconds, 55º C for 30 seconds, and 72º C for 1 minute for a total of 25 cycles. Afterwards, the temperature was held at 72º C for 10 minutes and held 4º C. The touchdown PCR contained 2% agarose gel, SYBR safe dye, and TAE buffer. After the PCR image was taken,  I recorded all observations based on the brightness or faintness of the band. Following the PCR, I ran the products on a gel electrophoresis gel at 140 volts for 30 minutes in order to separate the DNA fragments according to their size and charge [@aaij1972gel].
+During the following week, a PCR procedure was utilized in order to amplify the
+DNA extractions [@kuno1998universal]. Before beginning the protocol, I 
+calculated the necessary volumes of reagents needed for the master mix using 
+(n+1) + 10%, where n=7. The master mix contained 77μl Amp, 6.16μl 27f primer, 
+6.16μl 1492r primer, 7.7μl BSA, and 49.28μl H2O. I aliquoted 19μl of the master
+mix into all sample tubes and the negative control tube. Additionally, I 
+pipetted 1μl of DNA extraction sample into its designated tube and 1μl H2O into
+the negative control. The automated PCR cycles ran overnight. The PCR ran at 
+95º C for 5 minutes in order to denature and separate the long DNA strands. 
+The temperature was then lowered to 94ºC for 30 seconds. Temperature was 
+further lowered to 65ºC for 30 seconds, which is critical for annealing and 
+for the primers to sit on the DNA. The temperature was increased again to 
+72ºC for 1 minute for extension and elongation by DNA polymerase. The
+temperature was raised to 95ºC for 30 seconds, 55ºC for 30 seconds, and 
+72ºC for 1 minute for a total of 25 cycles. Afterwards, the temperature was
+held at 72ºC for 10 minutes and held 4ºC. The touchdown PCR contained 2% 
+agarose gel, SYBR safe dye, and TAE buffer. After the PCR image was taken, I 
+recorded all observations based on the brightness or faintness of the band. 
+Following the PCR, I ran the products on a gel electrophoresis gel at 140 volts 
+for 30 minutes in order to separate the DNA fragments according to their size
+and charge [@aaij1972gel].
 
 ### Sanger Sequencing
 
-After checking for successful amplification from PCR utilizing gel electrophoresis, I cleaned the PCR products using Invitrogen Exo-SAP (Exonuclease – Shrimp Alkaline Phosphatase). They were then sent for unidirectional Sanger sequencing at MCLAB located in South San Francisco, CA [@blazej2006microfabricated]. The Sanger sequencing results were finalized and sent back the following day for later analysis such as trimming and cleaning.
-
+After checking for successful amplification from PCR utilizing gel 
+electrophoresis, I cleaned the PCR products using Invitrogen Exo-SAP 
+(Exonuclease – Shrimp Alkaline Phosphatase). They were then sent for 
+unidirectional Sanger sequencing at MCLAB located in South San Francisco, CA 
+[@blazej2006microfabricated]. The Sanger sequencing results were finalized and 
+sent back the following day for later analysis such as trimming and cleaning.
 
 ## Culture-Free Samples
 
 ### PCR and Gel Electrophoresis
-For the culture-free samples, I began with PCR prep to amplify the DNA later for Illumina sequencing and analysis. For the PCR master mix, similar to the culture sample procedure, I calculated the necessary volumes of reagents needed using (n+1) + 10%, where n=7. The culture-free master mix contained: 77μl Amp, 6.2μl iseq 16SF, 6.2μl iseq 16R, 7.7 BSA, 50μl H2O, and, 1μl of the DNA extraction. The negative control sample contained 1μl of H2O instead. The automated PCR cycles ran at 95º C for 3 minutes, 95ºC for 30 more seconds, lowered to 55ºC for 30 seconds, 72ºC for an additional 30 seconds, and 72ºC for 5 minutes. Lastly, the PCR products were finally held at a temperature of 4ºC. I repeated this automated process  for a total of 25 cycles, allowing for amplification and the addition of a barcode for later Illumina sequencing. The touchdown PCR contained 2% agarose gel, SYBR safe dye, and TAE buffer. The image of the PCR bands were taken and I recorded observations based on the brightness and faintness of each band. Afterward, I utilized Qubit to quantify the data and recorded each of the concentrations.
+For the culture-free samples, I began with PCR prep to amplify the DNA later 
+for Illumina sequencing and analysis. For the PCR master mix, similar to the 
+culture sample procedure, I calculated the necessary volumes of reagents needed 
+using (n+1) + 10%, where n=7. The culture-free master mix contained 77μl Amp, 
+6.2μl iseq 16SF, 6.2μl iseq 16R, 7.7 BSA, 50μl H2O, and, 1μl of the DNA 
+extraction. The negative control sample contained 1μl of H2O instead. The 
+automated PCR cycles ran at 95ºC for 3 minutes, 95ºC for 30 more seconds, 
+lowered to 55ºC for 30 seconds, 72ºC for an additional 30 seconds, and 72ºC 
+for 5 minutes. Lastly, the PCR products were finally held at a temperature of
+4ºC. I repeated this automated process  for a total of 25 cycles, allowing for
+amplification and the addition of a barcode for later Illumina sequencing. The
+touchdown PCR contained 2% agarose gel, SYBR safe dye, and TAE buffer. The 
+image of the PCR bands were taken and I recorded observations based on the
+brightness and faintness of each band. Afterward, I utilized Qubit to quantify
+the data and recorded each of the concentrations.
 
 ### Illumina Sequencing
-Following electrophoresis, PCR products were purified using AmpureXP magnetic beads (Beckman-Coulter) and quantitated using a PicoGreen fluorescent assay (Invitrogen) on a Tecan Infinite M Plex plate reader. Purified PCR products were used as the template for a second round of PCR, which served to attach unique pairs of forward and reverse Illumina barcodes (Nextera XT Index 2 kit). All other components of the PCR mixtures were as for the first-round PCR. These reactions were cycled at 95 degrees C for 3 minutes, then 8 cycles of: 95 degrees C for 30 s, 55 degrees C for 30s, and 72 degrees C for 30s, followed by a 5 minute elongation cycle at 72 degrees C. Following this amplification, PCR products were purified and normalized with a SequelPrep normalization plate (Invitrogen), pooled, and then quantified once again with a Qubit 4 fluorometer (Invitrogen) and a TapeStation 4200 (Agilent) to verify library size and concentration. This library was then diluted to the loading concentration (50 pM) and combined with an Illumina PhiX spike-in library (5% spike in) and sequenced on an Illumina iSeq using a 2 x 150 bp consumable cartridge.
+Following electrophoresis, PCR products were purified using AmpureXP magnetic 
+beads (Beckman-Coulter) and quantitated using a PicoGreen fluorescent assay 
+(Invitrogen) on a Tecan Infinite M Plex plate reader. Purified PCR products 
+were used as the template for a second round of PCR, which served to attach 
+unique pairs of forward and reverse Illumina barcodes (Nextera XT Index 2 kit).
+All other components of the PCR mixtures were as for the first-round PCR. 
+These reactions were cycled at 95 degrees C for 3 minutes, then 8 cycles of: 
+95 degrees C for 30 s, 55 degrees C for 30s, and 72 degrees C for 30s, 
+followed by a 5 minute elongation cycle at 72 degrees C. Following this 
+amplification, PCR products were purified and normalized with a SequelPrep 
+normalization plate (Invitrogen), pooled, and then quantified once again with
+a Qubit 4 fluorometer (Invitrogen) and a TapeStation 4200 (Agilent) to verify 
+library size and concentration. This library was then diluted to the loading 
+concentration (50 pM) and combined with an Illumina PhiX spike-in library 
+(5% spike in) and sequenced on an Illumina iSeq using a 2 x 150 bp consumable
+cartridge.
 
 
 ## Sequence Analysis
 
-In order to clean and trim the culture sequences, I used Geneious software for data analysis. I first viewed all samples to determine which ones were successful and which can be cleaned and analyzed through BLAST. I then began the process of trimming the successful samples by taking out the beginning and ends of the sequence. I also cleaned the sequence data by using the IUPAC ambiguity codes to fixed those that contained mixed peaks. After cleaning and trimming the sequences, I used NCBI’s Nucleotide  BLAST to determine what strains the colony contained [@johnson2008ncbi]. All observations of the strains of each successful sample were recorded. Additionally, I created a Maximum Likelihood Phylogeny and Bayesian Phylogeny Tree. The outgroup was *Thermus aquaticus*.
+In order to clean and trim the culture sequences, I used Geneious software for 
+data analysis. The alignment program used is MAFFT, which is a fast and
+accurate multiple sequence alignment program in Geneious [@katoh2009multiple].
+I first viewed all samples to determine which ones were successful and which 
+can be cleaned and analyzed through BLAST. I then began the process of trimming
+the successful samples by taking out the beginning and ends of the sequence. 
+I also cleaned the sequence data by using the IUPAC ambiguity codes to fixed 
+those that contained mixed peaks. After cleaning and trimming the sequences, I
+used NCBI’s Nucleotide BLAST to determine what strains the colony contained 
+[@johnson2008ncbi]. All observations of the strains of each successful sample 
+were recorded. Additionally, I created a Maximum Likelihood Phylogeny and
+Bayesian Phylogeny Tree. The two phylogeny programs used were MrBayes and 
+PHYML. The relevant parameters for MrBayes included the substitution model set
+to GTR and the outgroup was a *Thermus aquaticus* strain. The MCMC settings 
+were set as well. The chain length was 1,100,000, heated chains were 4, heated 
+chain temperature was 0.2, subsampleing freq was 200, burn-in length was 
+100,000, and random seed was 11,383. I kept the priors paremters in the defaut 
+settings. The parameters for PHYML included the substitution model as GTR, 
+branch support as Bootstrap, the number of bootstraps as 100, and the optimize
+was set as topology/length/rate. Additionally, I set the proportion of 
+invariable sites as estimated as well as the gamma distribution parameter.
 
-In oder to analyze the sequences for the culture-free data, I ran a quality assessment of the fastqc files with the use of cyberduck. I then used trimmometric to remove the unusable sequences with a secure file transfer protocol. Bioawk was then utilized to convert the fastq files to fasta. Afterwards, I carried out BLAST to determine the top match in NCBI for each sample. These were all carried out through scripts in terminal.
+To analyze the sequences for the culture-free data, I ran a quality assessment 
+of the fastqc files with the use of cyberduck. I then used trimmometric to 
+remove the unusable sequences with a secure file transfer protocol. Bioawk was 
+then utilized to convert the fastq files to fasta. Afterwards, I carried out 
+BLAST to determine the top match in NCBI for each sample. These were all 
+carried out through scripts in terminal.
 
 
 # Results
 
-After quantifying DNA PCR products with Qubit, DNA concentrations from BART significantly varied for the culture data, ranging approximately 5.92-34.1 ng/μl. However, concentrations from Muni were consistent around 8.00-9.00 ng/μl (Table 1). 
-Table 2 that Qubit DNA concentrations also varied among culture-free samples, ranging from ~4.0-10.0 ng/μl. The lowest concentration was 4.44 ng/μl and the highest is 10.0 ng/μl.
+After quantifying DNA PCR products with Qubit, DNA concentrations from BART 
+significantly varied for the culture data, ranging approximately 5.92-34.1 
+ng/μl. However, concentrations from Muni were consistent around 8.00-9.00 ng/μl 
+(Table 1). 
+Table 2 showed that Qubit DNA concentrations also varied among culture-free 
+samples, ranging from ~4.0-10.0 ng/μl. The lowest concentration was 4.44 ng/μl 
+and the highest was 10.0 ng/μl.
 
  Figure 1 is an image of the PCR bands from the culture products and Figure 2 shows the image of the culture-free PCR bands. According to the image of culture PCRs derived from the DNA extractions depicted Figure 1 and Figure 2, the majority of the samples contain faint, but distinguishable, bands and ~200 to 300bp in reference to the ladder located in the far right lane (Figure 1).In Figure 1, M3 1:10 is the only faint band and the rest of the bands are relatively normal-bright. Figure 2 indicates that B1, B3, and M3 are faint and B2, M1, and M2 are bright (Figure 2). All PCR products were sufficient for later analysis. 
 
@@ -174,6 +307,19 @@ for PCR.
 **Table 2:** Table of Qubit culture-free dsDNA concentration results measured
 in (ng/μl).
 
+<<<<<<< HEAD
+=======
+ DNA product is present within most samlpes except for the negative control
+ wells. Figure 1 is an image of the PCR bands from the culture products and 
+ Figure 2 shows the image of the culture-free PCR bands. According to the image
+ of culture PCRs derived from the DNA extractions depicted Figure 1 and 
+ Figure 2, the majority of the samples contain faint, but distinguishable, 
+ bands and ~200 to 300bp in reference to the ladder located in the far right 
+ lane (Figure 1).In Figure 1, M3 1:10 is the only faint band and the rest of 
+ the bands are relatively normal-bright. Figure 2 indicates that B1, B3, and 
+ M3 are faint and B2, M1, and M2 are bright (Figure 2). All PCR products were
+ sufficient for later analysis. 
+>>>>>>> a886d6fe0a4cb9036cf4b9edfaa70265816f44a1
 
 ![](images/Culture_PCR.jpg)
 **Figure 1:** Image of culture PCRs from DNA extractions of most abundant and 
@@ -184,6 +330,30 @@ isolated colonies. The ladder indicates that the sequences are approximately
 **Figure 2:** Image of culture-free PCRs from all 6 original DNA extractions. 
 The ladder is located on the right, indicated that sequences are approximately 
 200bp.
+<<<<<<< HEAD
+=======
+
+
+
+```{r load-libraries}
+# load libraries ggplot2, dplyr, tidyr, readr, broom, and knitr
+library("ggplot2")
+library("dplyr")
+library("tidyr")
+library("readr")
+library("broom")
+library("knitr")
+```
+
+Figure 3 shows a boxplot of the culture 10x dilution colony abundances in each 
+treatments, BART and Muni. The mean values of colonies were not significantly 
+different between the two sites according to the statistic value which is 3.5 
+and the Wilcox p-value which is 0.82 for both treatments (Figure 3). Figure 4 
+also depicts a boxplot, but of the number of morphotypes in the 10x diluted 
+colonies for both treatments. From this, there was a difference between the
+number of morphortypes according to the Wilcox = 1 and p-value = 0.16 
+(Figure 4).
+>>>>>>> a886d6fe0a4cb9036cf4b9edfaa70265816f44a1
 
 
 ```{r read-in-culture-data}
@@ -252,6 +422,18 @@ culture_data %>%
 ```
 
 
+<<<<<<< HEAD
+=======
+After Sanger sequencing, the samples’ sequences were cleaned and trimmed
+through Geneious's MAFFT alignment program. Table 3 reveals all samples’ loci
+were 16S. After analysis, B1 1:10, B1 1:100. B2 1:100, and M3 1:100 were 
+determined usable and M2 1:10 and the negative control were not usable for the 
+next step of BLAST analysis. Table 3 also indicated the lengths of the 
+sequences after trimming and cleaning, and the manual corrections made 
+(Table 3).
+
+
+>>>>>>> a886d6fe0a4cb9036cf4b9edfaa70265816f44a1
 | Sequence Locus | Original Filename       | Filename after Correction                       | Usability | Length After Trimming | Number of Manual Corrections |
 |----------------|-------------------------|-------------------------------------------------|-----------|-----------------------|------------------------------|
 | 16S            | JI_B1_1_10_27f_A06.ab1  | JI_B1_1_10_27f_A06_JI_cleaned_mixed.ab1         | Usable    | 280                   | 1                            |
@@ -265,17 +447,40 @@ culture_data %>%
 **Table 3:** Sequence analysis after cleaning and trimming using MAFFT in Geneious.
 
 
+<<<<<<< HEAD
+=======
+Figure 5 shows the Maximum Likelihood Phylogeny of the successful samples.
+M2 1:10 and B2 1:100 are more closely related than B1 1:100. The bootstrap 
+value is 100 and the posterior probability value is 0.06 (Figure 5). Figure 6
+shows a Bayesian Phylogeny between these same samples. The figure indicates 
+similar results as the phylogeny. The bootstrap value is 1 and the Bayesian 
+posterior probability is 0.07 (Figure 6).
+
+>>>>>>> a886d6fe0a4cb9036cf4b9edfaa70265816f44a1
 ![](output/phylogenies/sanger_sequences_phyml_phylogeny.png)
 **Figure 5:** Maximum Likelihood Phylogeny of the three most successful samples
 with the root being *Thermus aquaticus*. M2 1:10 and B2 1:100 are more closely 
 related than B1 1:100, with a bootstrap of 100. 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a886d6fe0a4cb9036cf4b9edfaa70265816f44a1
 
 ![](output/phylogenies/sanger_sequences_mrbayes.png)
 **Figure 6:** A Bayesian Phylogeny indicating that sample B2 1:100 and M2 1:10
 are closely related with bootstrap 1 and Bayesian posterior probability of 
 0.07.
 
+<<<<<<< HEAD
+=======
+Lastly, the results of Nucleotide BLAST revealed which strains predominated 
+within each sample colonies, indicated by Table 4. From this, I discovered that
+B1 1:10 contains *Macrobacterium phyllosphaerae* strain. B1 1:100 contains
+*Microbacterium hydrocarbonoxydans* strain, B2 1:100 has
+*Acinetobacter schindleri* strain, M2 1:100 has *Acinetobacter sp.* strain, 
+and M3 1:100 contains a *Marinobacterium sp* MB3 gene. M3 1:10 and the 
+negativecontrol were failed sequences (Table 4).
+>>>>>>> a886d6fe0a4cb9036cf4b9edfaa70265816f44a1
 
 | Sample I.D.      | Description                                                                             | Percent Identity | Query Cover | E-Value | Accession  |
 |------------------|-----------------------------------------------------------------------------------------|------------------|-------------|---------|------------|
@@ -289,6 +494,7 @@ are closely related with bootstrap 1 and Bayesian posterior probability of
 **Table 4:** A table of BLAST results from Sanger Sequence samples. The table 
 indicates which strains are present in the bacterial colonies. 
 
+<<<<<<< HEAD
 
 ```{r}
 # Create a summary table of sequence results for each Phylum and its Abundance
@@ -306,13 +512,98 @@ melted_phyloseq %>%
                                    vjust = 1))
 ```
 **Figure 7**: Figure 7 is am summary table of the culture-free BLAST sequence results showing each phylum and its sum abundance. *Actinobacteria*, *Firmicutes*, and *Proteobacteria* are the most abundant phylum strains present in the samples. *Actinobacteria* is ~1300, *Firmicutes* is ~ 2300, and *Proteobacteria* ~5500.
+=======
+```{r your-code-here}
+# Add code chunks as needed for analyses
+```
+After running FastQC Reports on all the 6 culture-free data, I was able the 
+sequence quality for all samples. 0 sequences were flagged as poor quality in 
+samples B1, B2, B3, M1, M2, and M3. Sample B1 contained 5014 sequences and
+147-151 sequence length, B2 contained 7668 sequences and the same sequence 
+length, B3 had 4990 sequences and the same sequence length, M1 had 7573 
+sequences and 51-151 sequence length, M2 had 10693 sequences and 43-151 
+sequence length, and lastly M3 had 14803 sequences and 43-151 sequence length. 
+>>>>>>> a886d6fe0a4cb9036cf4b9edfaa70265816f44a1
 
 
 
+<<<<<<< HEAD
 
 ```{r your-code-here}
 # Add code chunks as needed for analyses
 ```
 
+=======
+It’s evident that many forms of bacteria grow on the surface of the floor in 
+public transportation locations, especially San Francisco’s BART and Muni. The 
+main questions going into this study were to determine what kinds of bacterial 
+strains contaminated the two environments and whether or not the diversity and
+abundance greatly differed between the two treatments. From these leading 
+questions and in reference to previous similar studies, I hypothesized that 
+*Staphylococci* and other less harmful pathogenic bacteria would be found in
+both BART and Muni. Furthermore, I hypothesized that the diversity would be 
+significantly greater in the Muni samples compared to Bart samples due to the 
+lack of maintenance and cleanliness of the city buses as well as the high 
+volume of people going through that specific form of transportation.
+
+According to my results, specifically the boxplot of the comparison between 
+colony abundances between the two treatments in the 10x dilution in Figure 3`, 
+the abundances did not vary significantly. Despite the high median value of 
+colony abundance in the Muni samples, the mean values are not significantly 
+different. Also, because the p-value is 0.82, I fail to reject the null 
+hypothesis which states that both treatment abundances are similar. Moreover,
+the boxplot depicted in Figure 4 shows a comparison between the morphotypes of
+the two treatments in the 10x dilution as well. Although both the mean and
+median vary greatly according to the boxplot, the p-value equals 0.16. Due to 
+these results, I fail to reject the null hypothesis, which states that the 
+morphotypes between BART and Muni are the same. Therefore, the results from 
+Figure 3 and 4 reveal that the bacterial communities growing on the BART and 
+Muni floor surfaces do not greatly differ in abundance and diversity.
+	
+Factors that may influence these findings may be that the same groups of people
+may be using both types of public transportation. Or the bacteria on the bottom
+of individuals’ shoes do not make a major difference in the bacteria found on
+the public transportation floor because much of the bacteria picked up from the
+ground within the Bay Area are transferred equally to both locations. 
+Additionally, the maintenance of both the BART and Muni may be more similar 
+that I thought before the study. Despite the apparent lack of cleanliness in 
+the Muni, it is nearly equal in the BART as well. These factor may have caused
+the results found in the boxplots and may have led to the conclusion that the
+diversity and abundance of bacterial colonies in the BART and Muni do not 
+differ greatly. These particular results align with much of the results found 
+by other similar studies.
+	
+My second question for this study addressed the contents of the bacteria on 
+the floor and what strains existed in these locations. After cleaning and 
+trimming the Sanger Sequencing data and matching it with BLAST results, I 
+discovered the taxa in such locations. According to Table 4 of my results, I 
+found that the majority of taxa were *Microbacterium*  and *Acinetobacter*
+strains. Both strains are nonpathogenic and mostly not harmful for human 
+health. These taxa findings greatly differed from the findings of studies in
+London, where research has found *Staphylococcus aureus* on hand-touch surfaces
+in public transportation [@otter2009bacterial]. These findings also did not
+align with my initial hypothesis. I’m confident in the sample BLAST results 
+that contained a percent identity of more than 90%. Therefore, I am confident
+in the BLAST results for B1 1:10, B1 1:100, B2 1:100, M2 1:10, and M3 1:10.
+
+Factors that may influence that deviation from my taxa findings to previous 
+studies such as the one done in London may be the difference in culture and 
+overall location. London contains higher volumes of people of different 
+cultures, both locals and tourists, compared to San Francisco, where most 
+people opt to take a car to travel, rather than public transportation. Also
+the streets of London are less clean and maintained than the Bay Area. Lastly, 
+the climate in the different places may also play a role in the growth of 
+certain bacterial strains.
+
+Additionally, the sequence for M3 1:10 was unusable for both phylogeny and 
+BLAST. This may be due to a mistake in pipetting or extraction of colony DNA. 
+It may also be because the colony was mixed with other neighboring colonies.
+Due to these possible factors, the sequence failed.
+
+Overall, this study revealed that nonpathogenic bacterial communities grow on
+the floor public transportation in the San Francisco community. This indicates 
+the improvement of maintenance within the city’s public locations. It also may
+reveal the future improvement of public health overall. 
+>>>>>>> a886d6fe0a4cb9036cf4b9edfaa70265816f44a1
 
 # Sources Cited
