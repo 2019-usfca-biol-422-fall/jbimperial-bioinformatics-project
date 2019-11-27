@@ -87,7 +87,9 @@ possessed *Microbacterium* strains and BART 2 1:100 contained
 [@takeuchi1998union].
 
 
+
 # Methods
+
 ## Sampling
 
 Materials required for the extraction of samples were 12 sterile 1.5mL tubes 
@@ -240,6 +242,7 @@ The Qubit DNA concentrations also varied among culture-free
 samples, ranging from ~4.0-10.0 ng/μl. The lowest concentration was 4.44 ng/μl 
 and the highest was 10.0 ng/μl (Table 2).
 
+<<<<<<< HEAD
 DNA product is present within most samlpes except for the negative control wells.
 Two separate images of the PCR bands from the culture and culture-free 
 products show the presence of PCR product. According to the image 
@@ -250,11 +253,27 @@ only faint band and the rest of the bands are relatively normal-bright
 (Figure 1). For the culture-free samples, B1, B3, and M3 are faint and B2, M1, 
 and M2 are bright (Figure 2). All PCR products were 
 sufficient for later analysis.
+=======
+ DNA product is present within most samlpes except for the negative control
+ wells. Two separate images of the PCR bands from the culture and culture-free 
+ products show the presence of PCR product. According to the image
+ of culture PCRs derived from the DNA extractions, the majority of the samples
+ contain faint, but distinguishable, bands and ~200 to 300bp in reference to the 
+ ladder located in the far right lane (Figure 1). M3 1:10 is the 
+ only faint band and the rest of the bands are relatively normal-bright 
+ (Figure 1). For the culture-free samples, B1, B3, and M3 are faint and B2, M1, 
+ and M2 are bright (Figure 2). All PCR products were
+ sufficient for later analysis.
+>>>>>>> 30d7779bb4fe4b4cea4ef772050cb0ee7b5677ec
 
 A boxplot indicates the culture 10x dilution colony abundances in each 
 treatments, BART and Muni (Figure 3). The mean values of colonies were not 
 significantly different between the two sites according to the statistic 
+<<<<<<< HEAD
 value which is 3.5 and the p-value which is 0.82 for both treatments 
+=======
+value which is 3.5 and the Wilcox p-value which is 0.82 for both treatments 
+>>>>>>> 30d7779bb4fe4b4cea4ef772050cb0ee7b5677ec
 (Figure 3). An additional boxplot indicates the number of morphotypes in the 
 10x diluted colonies for both treatments. From this, there was a difference 
 between thenumber of morphortypes according to the Wilcox = 1 and p-value 
@@ -294,20 +313,76 @@ sequence length, and lastly M3 had 14803 sequences and 43-151 sequence length.
 
 # Discussion
 
-It’s evident that many forms of bacteria grow on the surface of the floor in public transportation locations, especially San Francisco’s BART and Muni. The main questions going into this study were to determine what kinds of bacterial strains contaminated the two environments and whether or not the diversity and abundance greatly differed between the two treatments. From these leading questions and in reference to previous similar studies, I hypothesized that *Staphylococci* and other less harmful pathogenic bacteria would be found in both BART and Muni. Furthermore, I hypothesized that the diversity would be significantly greater in the Muni samples compared to Bart samples due to the lack of maintenance and cleanliness of the city buses as well as the high volume of people going through that specific form of transportation.
+It’s evident that many forms of bacteria grow on the surface of the floor in 
+public transportation locations, especially San Francisco’s BART and Muni. The 
+main questions going into this study were to determine what kinds of bacterial 
+strains contaminated the two environments and whether or not the diversity and
+abundance greatly differed between the two treatments. From these leading 
+questions and in reference to previous similar studies, I hypothesized that 
+*Staphylococci* and other less harmful pathogenic bacteria would be found in
+both BART and Muni. Furthermore, I hypothesized that the diversity would be 
+significantly greater in the Muni samples compared to Bart samples due to the 
+lack of maintenance and cleanliness of the city buses as well as the high 
+volume of people going through that specific form of transportation.
 
-According to my results, specifically the boxplot of the comparison between colony abundances between the two treatments in the 10x dilution in Figure 2, the abundances did not vary significantly. Despite the high median value of colony abundance in the Muni samples, the mean values are not significantly different. Also, because the p-value is 0.82, I fail to reject the null hypothesis which states that both treatment abundances are similar. Moreover, the boxplot depicted in Figure 3 shows a comparison between the morphotypes of the two treatments in the 10x dilution as well. Although both the mean and median vary greatly according to the boxplot, the p-value equals 0.16. Due to these results, I fail to reject the null hypothesis, which states that the morphotypes between BART and Muni are the same. Therefore, the results from Figure 2 and 3 reveal that the bacterial communities growing on the BART and Muni floor surfaces do not greatly differ in abundance and diversity.
+According to my results, specifically the boxplot of the comparison between 
+colony abundances between the two treatments in the 10x dilution in Figure 3`, 
+the abundances did not vary significantly. Despite the high median value of 
+colony abundance in the Muni samples, the mean values are not significantly 
+different. Also, because the p-value is 0.82, I fail to reject the null 
+hypothesis which states that both treatment abundances are similar. Moreover,
+the boxplot depicted in Figure 4 shows a comparison between the morphotypes of
+the two treatments in the 10x dilution as well. Although both the mean and
+median vary greatly according to the boxplot, the p-value equals 0.16. Due to 
+these results, I fail to reject the null hypothesis, which states that the 
+morphotypes between BART and Muni are the same. Therefore, the results from 
+Figure 3 and 4 reveal that the bacterial communities growing on the BART and 
+Muni floor surfaces do not greatly differ in abundance and diversity.
 	
-Factors that may influence these findings may be that the same groups of people may be using both types of public transportation. Or the bacteria on the bottom of individuals’ shoes do not make a major difference in the bacteria found on the public transportation floor because much of the bacteria picked up from the ground within the Bay Area are transferred equally to both locations. Additionally, the maintenance of both the BART and Muni may be more similar that I thought before the study. Despite the apparent lack of cleanliness in the Muni, it is nearly equal in the BART as well. These factor may have caused the results found in the boxplots and may have led to the conclusion that the diversity and abundance of bacterial colonies in the BART and Muni do not differ greatly. These particular results align with much of the results found by other similar studies.
+Factors that may influence these findings may be that the same groups of people
+may be using both types of public transportation. Or the bacteria on the bottom
+of individuals’ shoes do not make a major difference in the bacteria found on
+the public transportation floor because much of the bacteria picked up from the
+ground within the Bay Area are transferred equally to both locations. 
+Additionally, the maintenance of both the BART and Muni may be more similar 
+that I thought before the study. Despite the apparent lack of cleanliness in 
+the Muni, it is nearly equal in the BART as well. These factor may have caused
+the results found in the boxplots and may have led to the conclusion that the
+diversity and abundance of bacterial colonies in the BART and Muni do not 
+differ greatly. These particular results align with much of the results found 
+by other similar studies.
 	
-My second question for this study addressed the contents of the bacteria on the floor and what strains existed in these locations. After cleaning and trimming the Sanger Sequencing data and matching it with BLAST results, I discovered the taxa in such locations. According to Table 3 of my results, I found that the majority of taxa were *Microbacterium*  and *Acinetobacter* strains. Both strains are nonpathogenic and mostly not harmful for human health. These taxa findings greatly differed from the findings of studies in London, where research has found *Staphylococcus aureus* on hand-touch surfaces in public transportation [@otter2009bacterial]. These findings also did not align with my initial hypothesis. I’m confident in the sample BLAST results that contained a percent identity of more than 90%. Therefore, I am confident in the BLAST results for B1 1:10, B1 1:100, B2 1:100, M2 1:10, and M3 1:10.
+My second question for this study addressed the contents of the bacteria on 
+the floor and what strains existed in these locations. After cleaning and 
+trimming the Sanger Sequencing data and matching it with BLAST results, I 
+discovered the taxa in such locations. According to Table 4 of my results, I 
+found that the majority of taxa were *Microbacterium*  and *Acinetobacter*
+strains. Both strains are nonpathogenic and mostly not harmful for human 
+health. These taxa findings greatly differed from the findings of studies in
+London, where research has found *Staphylococcus aureus* on hand-touch surfaces
+in public transportation [@otter2009bacterial]. These findings also did not
+align with my initial hypothesis. I’m confident in the sample BLAST results 
+that contained a percent identity of more than 90%. Therefore, I am confident
+in the BLAST results for B1 1:10, B1 1:100, B2 1:100, M2 1:10, and M3 1:10.
 
-Factors that may influence that deviation from my taxa findings to previous studies such as the one done in London may be the difference in culture and overall location. London contains higher volumes of people of different cultures, both locals and tourists, compared to San Francisco, where most people opt to take a car to travel, rather than public transportation. Also the streets of London are less clean and maintained than the Bay Area. Lastly, the climate in the different places may also play a role in the growth of certain bacterial strains.
+Factors that may influence that deviation from my taxa findings to previous 
+studies such as the one done in London may be the difference in culture and 
+overall location. London contains higher volumes of people of different 
+cultures, both locals and tourists, compared to San Francisco, where most 
+people opt to take a car to travel, rather than public transportation. Also
+the streets of London are less clean and maintained than the Bay Area. Lastly, 
+the climate in the different places may also play a role in the growth of 
+certain bacterial strains.
 
-Additionally, the sequence for M3 1:10 was unusable for both phylogeny and BLAST. This may be due to a mistake in pipetting or extraction of colony DNA. It may also be because the colony was mixed with other neighboring colonies. Due to these possible factors, the sequence failed.
+Additionally, the sequence for M3 1:10 was unusable for both phylogeny and 
+BLAST. This may be due to a mistake in pipetting or extraction of colony DNA. 
+It may also be because the colony was mixed with other neighboring colonies.
+Due to these possible factors, the sequence failed.
 
-Overall, this study revealed that nonpathogenic bacterial communities grow on the floor public transportation in the San Francisco community. This indicates the improvement of maintenance within the city’s public locations. It also may reveal the future improvement of public health overall.
-
+Overall, this study revealed that nonpathogenic bacterial communities grow on
+the floor public transportation in the San Francisco community. This indicates 
+the improvement of maintenance within the city’s public locations. It also may
+reveal the future improvement of public health overall. 
 
 # Figures and Tables
 ```{r load-libraries}
@@ -440,6 +515,7 @@ culture_data %>%
 | 16S            | JI_M3_1_10_27f_E06.ab1  | JI_M3_1_10_27f_E06_JI_failed.ab1                | Unusable  | 5                     | 0                            |
 | 16S            | JI_M3_1_100_27f_F06.ab1 | JI_M3_1_100_27f_F06_JI_cleaned_failed_blast.ab1 | Usable    | 824                   | 3                            |
 | 16S            | JI_neg_27f_G06.ab1      | JI_neg_27f_G06_JI_failed.ab1                    | Unusable  | 5                     | 0                            |
+
 **Table 3:** Sequence analysis after cleaning and trimming using MAFFT in Geneious.
 
 
@@ -481,6 +557,7 @@ melted_phyloseq <- melted_phyloseq %>%
 ```
 
 
+<<<<<<< HEAD
 ```{r summary-table}
 # Create a summary chart of sequence results for each phylum and its abundance
 melted_phyloseq %>%
@@ -516,8 +593,12 @@ plot_richness(phyloseq_obj,
   xlab("Sample Type") +
   geom_boxplot() +
   theme_bw()
+=======
+
+```{r your-code-here}
+# Add code chunks as needed for analyses
+>>>>>>> 30d7779bb4fe4b4cea4ef772050cb0ee7b5677ec
 ```
 **Figure 9:** The boxplot shows a Shannon diversity index of each sample type and the alpha diversity measure.
-
 
 # Sources Cited
