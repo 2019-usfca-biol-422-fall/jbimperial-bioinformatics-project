@@ -38,7 +38,7 @@ microbial communities in micro-locations of public transportation harboring
 abundant bacteria. These locations included hand-touch surfaces, such as 
 handrails and doors, seats, and the floor. The findings of this particular 
 study found that the majority of bacteria was located on the floor 
-[@yeh2011diversity]. Numerous othersimilar research has been done in in 
+[@yeh2011diversity]. Numerous other similar research has been done in in 
 different cities such as London and Seoul in order to investigate the 
 culturable airborne bacterial and fungal communitiesin public transportation 
 locations [@hwang2014comparison].
@@ -236,55 +236,60 @@ After quantifying DNA PCR products with Qubit, DNA concentrations from BART
 significantly varied for the culture data, ranging approximately 5.92-34.1 
 ng/μl. However, concentrations from Muni were consistent around 8.00-9.00 ng/μl 
 (Table 1).
-Table 2 showed that Qubit DNA concentrations also varied among culture-free 
+The Qubit DNA concentrations also varied among culture-free 
 samples, ranging from ~4.0-10.0 ng/μl. The lowest concentration was 4.44 ng/μl 
-and the highest was 10.0 ng/μl.
+and the highest was 10.0 ng/μl (Table 2).
 
- DNA product is present within most samlpes except for the negative control
- wells. Figure 1 is an image of the PCR bands from the culture products and 
- Figure 2 shows the image of the culture-free PCR bands. According to the image
- of culture PCRs derived from the DNA extractions depicted Figure 1 and 
- Figure 2, the majority of the samples contain faint, but distinguishable, 
- bands and ~200 to 300bp in reference to the ladder located in the far right 
- lane (Figure 1).In Figure 1, M3 1:10 is the only faint band and the rest of 
- the bands are relatively normal-bright. Figure 2 indicates that B1, B3, and 
- M3 are faint and B2, M1, and M2 are bright (Figure 2). All PCR products were
- sufficient for later analysis.
+DNA product is present within most samlpes except for the negative control wells.
+Two separate images of the PCR bands from the culture and culture-free 
+products show the presence of PCR product. According to the image 
+of culture PCRs derived from the DNA extractions, the majority of the samples 
+contain faint, but distinguishable, bands and ~200 to 300bp in reference to the 
+ladder located in the far right lane (Figure 1). M3 1:10 is the 
+only faint band and the rest of the bands are relatively normal-bright 
+(Figure 1). For the culture-free samples, B1, B3, and M3 are faint and B2, M1, 
+and M2 are bright (Figure 2). All PCR products were 
+sufficient for later analysis.
 
-Figure 3 shows a boxplot of the culture 10x dilution colony abundances in each 
-treatments, BART and Muni. The mean values of colonies were not significantly 
-different between the two sites according to the statistic value which is 3.5 
-and the Wilcox p-value which is 0.82 for both treatments (Figure 3). Figure 4 
-also depicts a boxplot, but of the number of morphotypes in the 10x diluted 
-colonies for both treatments. From this, there was a difference between the
-number of morphortypes according to the Wilcox = 1 and p-value = 0.16 
-(Figure 4).
+A boxplot indicates the culture 10x dilution colony abundances in each 
+treatments, BART and Muni (Figure 3). The mean values of colonies were not 
+significantly different between the two sites according to the statistic 
+value which is 3.5 and the p-value which is 0.82 for both treatments 
+(Figure 3). An additional boxplot indicates the number of morphotypes in the 
+10x diluted colonies for both treatments. From this, there was a difference 
+between thenumber of morphortypes according to the Wilcox = 1 and p-value 
+= 0.16 (Figure 4).
 
 After Sanger sequencing, the samples’ sequences were cleaned and trimmed
-through Geneious's MAFFT alignment program. Table 3 reveals all samples’ loci
-were 16S. After analysis, B1 1:10, B1 1:100. B2 1:100, and M3 1:100 were 
-determined usable and M2 1:10 and the negative control were not usable for the 
-next step of BLAST analysis. Table 3 also indicated the lengths of the 
-sequences after trimming and cleaning, and the manual corrections made 
-(Table 3).
+through Geneious's MAFFT alignment program. All samples’ loci
+were 16S (Table 3). After analysis, B1 1:10, B1 1:100. B2 1:100, and M3 1:100
+were determined usable and M2 1:10 and the negative control were not usable 
+for the next step of BLAST analysis. The lengths of the sequences after 
+trimming and cleaning, and the manual corrections made are also changed 
+after alignment (Table 3).
 
-Figure 5 shows the Maximum Likelihood Phylogeny of the successful samples.
+The Maximum Likelihood Phylogeny shows the phylogeny of the successful samples.
 M2 1:10 and B2 1:100 are more closely related than B1 1:100. The bootstrap 
-value is 100 and the posterior probability value is 0.06 (Figure 5). Figure 6
-shows a Bayesian Phylogeny between these same samples. The figure indicates 
-similar results as the phylogeny. The bootstrap value is 1 and the Bayesian 
-posterior probability is 0.07 (Figure 6).
+value is 100 and the posterior probability value is 0.06 (Figure 5). A Bayesian
+Phylogeny is also indicatedbetween these same samples. The Bayesian Tree
+indicates similar results as the phylogeny. The bootstrap value is 1 and 
+the Bayesian posterior probability is 0.07 (Figure 6).
 
 Lastly, the results of Nucleotide BLAST revealed which strains predominated 
-within each sample colonies, indicated by Table 4. From this, I discovered that
+within each sample colonies (Table 4). From this, I discovered that
 B1 1:10 contains *Macrobacterium phyllosphaerae* strain. B1 1:100 contains
 *Microbacterium hydrocarbonoxydans* strain, B2 1:100 has
 *Acinetobacter schindleri* strain, M2 1:100 has *Acinetobacter sp.* strain, 
 and M3 1:100 contains a *Marinobacterium sp* MB3 gene. M3 1:10 and the 
-negativecontrol were failed sequences (Table 4).
- 
+negativecontrol were failed sequences.
 
-After running FastQC Reports on all the 6 culture-free data, I was able the sequence quality for all samples. 0 sequences were flagged as poor quality in samples B1, B2, B3, M1, M2, and M3. Sample B1 contained 5014 sequences and 147-151 sequence length, B2 contained 7668 sequences and the same sequence length, B3 had 4990 sequences and the same sequence length, M1 had 7573 sequences and 51-151 sequence length, M2 had 10693 sequences and 43-151 sequence length, and lastly M3 had 14803 sequences and 43-151 sequence length. 
+After running FastQC Reports on all the 6 culture-free data, I was able the 
+sequence quality for all samples. 0 sequences were flagged as poor quality in 
+samples B1, B2, B3, M1, M2, and M3. Sample B1 contained 5014 sequences and
+147-151 sequence length, B2 contained 7668 sequences and the same sequence 
+length, B3 had 4990 sequences and the same sequence length, M1 had 7573 
+sequences and 51-151 sequence length, M2 had 10693 sequences and 43-151 
+sequence length, and lastly M3 had 14803 sequences and 43-151 sequence length.
 
 
 # Discussion
@@ -313,7 +318,16 @@ library("tidyr")
 library("readr")
 library("broom")
 library("knitr")
+library("dada2")
+library("phyloseq")
+library("mctoolsr")
+library("devtools")
+library("seqinr")
+library("citr")
+library("lubridate")
+library("forcats")
 ```
+
 
 | Sample I.D. | Sample Group      | Sample Dilution I.D. | DNA Concentration (ng/μl) |
 |-------------|-------------------|----------------------|---------------------------|
@@ -453,9 +467,22 @@ are closely related with bootstrap 1 and Bayesian posterior probability of
 **Table 4:** A table of BLAST results from Sanger Sequence samples. The table 
 indicates which strains are present in the bacterial colonies.
 
+```{r load-phyloseq-data}
+# load in the saved phyloseq object to work with
+load("output/phyloseq_obj.Rda")
+
+# melt phyloseq obj into a data frame for dplyr/ggplot
+# analysis and visualization
+melted_phyloseq <- psmelt(phyloseq_obj)
+
+# turn all factor columns into character columns for dplyr
+melted_phyloseq <- melted_phyloseq %>%
+  mutate_if(is.factor, as.character)
+```
+
 
 ```{r summary-table}
-# Create a summary table of sequence results for each Phylum and its Abundance
+# Create a summary chart of sequence results for each phylum and its abundance
 melted_phyloseq %>%
   group_by(Phylum) %>%
   summarize(sum_abundance = sum(Abundance,
@@ -469,17 +496,28 @@ melted_phyloseq %>%
                                    hjust = 1,
                                    vjust = 1))
 ```
-**Figure 7**: Figure 7 is am summary table of the culture-free BLAST sequence results showing each phylum and its sum abundance. *Actinobacteria*, *Firmicutes*, and *Proteobacteria* are the most abundant phylum strains present in the samples. *Actinobacteria* is ~1300, *Firmicutes* is ~ 2300, and *Proteobacteria* ~5500.
+**Figure 7:** Figure 7 is am summary chart of the culture-free BLAST sequence results showing each phylum and its sequence sum abundance. *Actinobacteria*, *Firmicutes*, and *Proteobacteria* are the most abundant phylum strains present in the samples. *Actinobacteria* is ~1300, *Firmicutes* is ~ 2300, and *Proteobacteria* ~5500.
 
-```{r}
-# 
+```{r bar-plot}
+# bar plot of taxa and sample type
+plot_bar(phyloseq_obj,
+         x = "type",
+         fill = "Phylum") +
+  labs(y= "Sequence Abundance", x = "Sample Type") +
+  ggtitle("Sequence Abundance of Each Taxa")
 ```
+**Figure 8:** The bar chart in this figure depicts sequence abundance of each taxa found for each of the sample data groups: BART, Muni, negative control, and positive control. BART samples contained mostly *Proteobacteria* and *Verrucomicrobia*. Muni contained *Verrucomicrobia*. Negative control contained *Firmicutes* and *Actinobacteria* and the positive control does not contain any of the taxa, all indicated by the color on the bar chart.
 
-
-
-```{r your-code-here}
-# Add code chunks as needed for analyses
+```{r shannon-simpson-boxplot}
+# Create a Shannon and Simpson diversity index boxplot of sample type and alpha diversity measure
+plot_richness(phyloseq_obj,
+              x = "type",
+              measures = c("Shannon")) +
+  xlab("Sample Type") +
+  geom_boxplot() +
+  theme_bw()
 ```
+**Figure 9:** The boxplot shows a Shannon diversity index of each sample type and the alpha diversity measure.
 
 
 # Sources Cited
