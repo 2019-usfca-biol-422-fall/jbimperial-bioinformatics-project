@@ -6,6 +6,6 @@
 for file in /data/my-illumina-sequences/trimmed/JI*.fastq
 do
 	echo Convert fastq to fasta file with bioawk
-	bioawk -c fastx '{print ">"$name"\n"$seq}' "$file"  > /data/my-illumina-sequences/trimmed-fasta/JI-M3_S36_L001_R1_001.trim.fasta
+	bioawk -c fastx '{print ">"$name"\n"$seq}' "$file"  > /data/my-illumina-sequences/trimmed-fasta/JI*.fasta
 	echo Done
 done 
