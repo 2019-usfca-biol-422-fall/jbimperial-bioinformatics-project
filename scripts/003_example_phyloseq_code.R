@@ -62,4 +62,3 @@ melted_phyloseq %>%
   summarize(sum_abundance = sum(Abundance,
                                   na.rm = TRUE)) %>%
   kable()
-

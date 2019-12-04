@@ -37,7 +37,7 @@ library("phyloseq")
 # Accessed October 19, 2017
 
 # set the base path for our input data files
-path <- "/data/raw_data"
+path <- "/data/my-illumina-sequences/unzipped/"
 
 # Sort ensures samples are in order
 filenames_forward_reads <- sort(list.files(path, pattern = ".fastq"))
@@ -172,4 +172,3 @@ export_taxa_table_and_seqs <- function(sequence_table_nochim,
 export_taxa_table_and_seqs(sequence_table_nochim,
                            "output/sequence_variants_table.txt",
                            "output/sequence_variants_seqs.fa")
-
