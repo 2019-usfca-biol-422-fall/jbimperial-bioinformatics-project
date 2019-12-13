@@ -382,7 +382,7 @@ melted_phyloseq %>%
   ggplot(aes(x = type,
              y = sum_abund,
              fill = Phylum,
-             color = Phylum,)) +
+             color = Phylum, )) +
   theme(axis.text.x = element_text(angle = 90,
                                         hjust = 1)) +
     ggtitle("Phylum Sum Abundance") +
