@@ -1,7 +1,7 @@
 ---
 title: "*Microbacterium*, *Acinetobacter*, and Nonpathogenic Bacteria Found in Both San Francisco Public Transportation – BART and Muni"
 author: "Jacqueline Imperial"
-date: "December 4, 2019"
+date: "December 12, 2019"
 output: word_document
 csl: bioinformatics.csl
 bibliography: references.bib
@@ -382,7 +382,9 @@ melted_phyloseq %>%
   ggplot(aes(x = type,
              y = sum_abund,
              fill = Phylum,
-             color = Phylum)) +
+             color = Phylum,)) +
+  theme(axis.text.x = element_text(angle = 90,
+                                        hjust = 1)) +
     ggtitle("Phylum Sum Abundance") +
   labs(y = "Sum Abundance",
        x = "Type") +
@@ -413,13 +415,8 @@ melted_phyloseq %>%
 # Create a Shannon and Simpson diversity index boxplot
 plot_richness(phyloseq_obj,
               x = "type",
-              measures = c("Shannon"))
- xlab("Sample Type") +
-  geom_boxplot() +
-  theme_bw()
-  theme(axis.text.x = element_text(angle = 45,
-                                   hjust = 1,
-                                   vjust = 1))
+              measures = c("Shannon"),
+              title = "Diversity Index of Each Treatment")
 ```
 **Figure 10:** The boxplot shows a Shannon diversity index of each sample type and the alpha diversity measure.
 
