@@ -1,7 +1,46 @@
 ---
-title: "Your Title Here"
-author: "Don Francisco"
+title: "Project Proposal"
+author: "Jacqueline Imperial"
 date: "8/27/2019"
 output: word_document
+csl: bioinformatics.csl
+bibliography: references.bib
 ---
 
+#Introduction
+
+#Methods
+
+#
+
+# Overview of Proposed Project 
+
+The project I am planning will examine bacteria on the surfaces of public transportation within the Bay Area. I will specifically obtain 3 samples from the floor of different SF muni buses and Bart cars.
+
+Studies have shown that there are a plethora of both air-borne fungi and bacteria contaminating the seats, hand-touch surfaces, and floors of public transportation. [@otter2009bacterial] [@lee2005exposure]
+
+## Question(s)
+
+How much did the bacteria concentration and diversity vary between the Muni and Bart and why?
+
+What kinds of bacteria contaminated these environments and how did they vary?
+
+What types of factors may have an effect on the differences in bacteria in the two environments. 
+
+## Hypothesis/ses
+
+The diversity will be larger in the Muni due to the lack of maintainance and high volumes of passengers. 
+
+Both the environments will be contaminated with staphylococci and other pathogens. 
+
+## Study Design 
+
+  Samples will be 3 separate swabs of the floor for both enviroments. For the Muni, the individual swab samples will be taken from different buses on the same route. The samples for the Bart will be from different cars of the same train. All samples will derive from the entrance of the bus or car door.
+  Samples will be done during class on Tuesday, September 3rd. The Bart samples will be taken from the Civic Center Bart Station and the Muni samples will be obtained from the 5 or 5R to Ocean Beach at bus stop on Fulton St. This process will take approximately 1 hour. 
+
+### Materials Required
+
+* 6 sterile swabs 
+* 6 individual tubes
+* sterile gloves
+* buffer
